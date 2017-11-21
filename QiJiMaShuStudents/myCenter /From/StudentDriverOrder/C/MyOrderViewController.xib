@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyOrderViewController">
+            <connections>
+                <outlet property="bgImageView" destination="mTV-DM-69h" id="ase-Be-VMx"/>
+                <outlet property="mainTableView" destination="rz1-Jg-xgm" id="JMI-oy-JvR"/>
+                <outlet property="moreOperationView" destination="N8f-hw-RZu" id="RSW-d0-cey"/>
+                <outlet property="postCancelOrderBtn" destination="cjI-o5-LgD" id="hfC-Jx-4Ip"/>
+                <outlet property="sureCancelOrderView" destination="QQT-Gi-JpP" id="F50-JJ-I2f"/>
+                <outlet property="view" destination="ukJ-k5-C6u" id="mZW-8E-s4D"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ukJ-k5-C6u">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_myorder_nodata" translatesAutoresizingMaskIntoConstraints="NO" id="mTV-DM-69h">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="rz1-Jg-xgm">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="wFS-kN-9TI"/>
+                        <outlet property="delegate" destination="-1" id="zTf-0L-2e8"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rz1-Jg-xgm" secondAttribute="bottom" id="09H-AI-wES"/>
+                <constraint firstItem="mTV-DM-69h" firstAttribute="top" secondItem="ukJ-k5-C6u" secondAttribute="top" id="DIW-v6-0P5"/>
+                <constraint firstAttribute="bottom" secondItem="mTV-DM-69h" secondAttribute="bottom" id="F9F-uM-HYT"/>
+                <constraint firstAttribute="trailing" secondItem="rz1-Jg-xgm" secondAttribute="trailing" id="JP5-jM-tpT"/>
+                <constraint firstItem="rz1-Jg-xgm" firstAttribute="top" secondItem="mTV-DM-69h" secondAttribute="top" id="RSv-qv-Slg"/>
+                <constraint firstItem="mTV-DM-69h" firstAttribute="leading" secondItem="ukJ-k5-C6u" secondAttribute="leading" id="Wng-AU-Za8"/>
+                <constraint firstAttribute="trailing" secondItem="mTV-DM-69h" secondAttribute="trailing" id="wvt-h8-P5C"/>
+                <constraint firstItem="rz1-Jg-xgm" firstAttribute="leading" secondItem="ukJ-k5-C6u" secondAttribute="leading" id="yai-Nj-Jyy"/>
+            </constraints>
+            <point key="canvasLocation" x="-552.5" y="243.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="N8f-hw-RZu" userLabel="MoreOperation">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhc-La-QWR" userLabel="Cover">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tth-Qc-ZPe" userLabel="Close">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickForCloseMoreOperation:" destination="-1" eventType="touchUpInside" id="dmj-86-8kL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tth-Qc-ZPe" secondAttribute="bottom" id="3w8-3Q-VD6"/>
+                        <constraint firstAttribute="trailing" secondItem="tth-Qc-ZPe" secondAttribute="trailing" id="k13-TO-4hg"/>
+                        <constraint firstItem="tth-Qc-ZPe" firstAttribute="top" secondItem="vhc-La-QWR" secondAttribute="top" id="kI2-dH-hUJ"/>
+                        <constraint firstItem="tth-Qc-ZPe" firstAttribute="leading" secondItem="vhc-La-QWR" secondAttribute="leading" id="lFS-66-U8b"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQT-Gi-JpP" userLabel="SureCancelOrder">
+                    <rect key="frame" x="160" y="216" width="280" height="149"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距离学学开始时间四小时内取消订单需要教练审核同意,超过四个小时直接取消成功" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTG-KX-OAr" userLabel="tip1">
+                            <rect key="frame" x="43" y="8" width="195" height="81"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="81" id="ZYs-w6-8vm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjI-o5-LgD">
+                            <rect key="frame" x="49.5" y="97" width="180" height="39"/>
+                            <color key="backgroundColor" red="0.31372549020000001" green="0.79607843140000001" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="180" id="gIa-rZ-Fok"/>
+                                <constraint firstAttribute="height" constant="39" id="q6Y-QI-MR0"/>
+                            </constraints>
+                            <state key="normal" title="请教练确认">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickForSureCancelOrder:" destination="-1" eventType="touchUpInside" id="9T8-cs-bT8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S23-ho-m7C">
+                            <rect key="frame" x="240" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="54d-r3-mvW"/>
+                                <constraint firstAttribute="width" constant="40" id="zn4-GV-J2v"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="15" maxY="0.0"/>
+                            <state key="normal" image="icon_close_orderdetail">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickForCloseMoreOperation:" destination="-1" eventType="touchUpInside" id="wOE-2i-Set"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="S23-ho-m7C" firstAttribute="top" secondItem="QQT-Gi-JpP" secondAttribute="top" id="3oy-Sd-2sS"/>
+                        <constraint firstAttribute="bottom" secondItem="cjI-o5-LgD" secondAttribute="bottom" constant="13" id="6YF-5c-flO"/>
+                        <constraint firstAttribute="trailing" secondItem="zTG-KX-OAr" secondAttribute="trailing" constant="42" id="AKm-7D-iBG"/>
+                        <constraint firstAttribute="height" constant="149" id="AaY-Lj-Y0y"/>
+                        <constraint firstItem="zTG-KX-OAr" firstAttribute="top" secondItem="QQT-Gi-JpP" secondAttribute="top" constant="8" id="FTS-Dv-rJa"/>
+                        <constraint firstAttribute="centerX" secondItem="cjI-o5-LgD" secondAttribute="centerX" id="KIA-Fg-gvi"/>
+                        <constraint firstAttribute="trailing" secondItem="S23-ho-m7C" secondAttribute="trailing" id="pJV-up-tWM"/>
+                        <constraint firstAttribute="width" constant="280" id="yNy-Y6-Gju"/>
+                        <constraint firstItem="zTG-KX-OAr" firstAttribute="leading" secondItem="QQT-Gi-JpP" secondAttribute="leading" constant="43" id="yv7-ly-pJr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vhc-La-QWR" secondAttribute="bottom" id="Jb1-iq-egq"/>
+                <constraint firstAttribute="trailing" secondItem="vhc-La-QWR" secondAttribute="trailing" id="YR6-j9-xvz"/>
+                <constraint firstAttribute="centerY" secondItem="QQT-Gi-JpP" secondAttribute="centerY" constant="9.5" id="aKi-ZB-uhU"/>
+                <constraint firstItem="vhc-La-QWR" firstAttribute="leading" secondItem="N8f-hw-RZu" secondAttribute="leading" id="eoH-Lh-1h1"/>
+                <constraint firstAttribute="centerX" secondItem="QQT-Gi-JpP" secondAttribute="centerX" id="eqt-af-AJr"/>
+                <constraint firstItem="vhc-La-QWR" firstAttribute="top" secondItem="N8f-hw-RZu" secondAttribute="top" id="qVK-3L-5p3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="31" y="921"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_myorder_nodata" width="320" height="568"/>
+        <image name="icon_close_orderdetail" width="11" height="11"/>
+    </resources>
+</document>
