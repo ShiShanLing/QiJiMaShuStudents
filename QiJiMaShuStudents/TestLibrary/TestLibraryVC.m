@@ -7,7 +7,7 @@
 //
 
 #import "TestLibraryVC.h"
-#define EXERCISE_URL @"http://www.jxchezhilian.com/xb/examination/index.jsp" // 正式服
+#define EXERCISE_URL @"http://equestrian.sport.org.cn" // 正式服
 @interface TestLibraryVC ()<UIWebViewDelegate>
 @property (strong, nonatomic) UIWebView *exerciseView;              // 题库
 @property (assign, nonatomic) BOOL webViewIsLoaded;                 // 题库是否已加载
@@ -30,7 +30,7 @@
     
 
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];//导航条颜
-    self.navigationItem.title = @"题库";//导航条标题
+    self.navigationItem.title = @"咨询";//导航条标题
     UIButton *releaseButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     releaseButton.frame = CGRectMake(0, 0, 70, 50);
     [releaseButton setImage:[UIImage imageNamed:@"ic_menu"] forState:(UIControlStateNormal)];
@@ -43,7 +43,6 @@
     [releaseButton addTarget:self action:@selector(RegisteredAccount) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *releaseButtonItem = [[UIBarButtonItem alloc] initWithCustomView:releaseButton];
     self.navigationItem.leftBarButtonItem = releaseButtonItem;
-
     
 
 }

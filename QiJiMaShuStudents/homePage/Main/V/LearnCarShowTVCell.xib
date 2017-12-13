@@ -22,8 +22,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="courseBJ" translatesAutoresizingMaskIntoConstraints="NO" id="71r-oz-WSb">
                         <rect key="frame" x="11" y="0.0" width="356" height="122"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25n-XF-rnd">
-                        <rect key="frame" x="300" y="40" width="60" height="38"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25n-XF-rnd">
+                        <rect key="frame" x="300" y="40" width="60" height="39"/>
                         <color key="backgroundColor" red="0.95246535539999999" green="0.56881427760000003" blue="0.19122317429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="fbH-B6-1x0"/>

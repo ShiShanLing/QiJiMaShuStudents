@@ -10,8 +10,6 @@
 #import "HomePageVC.h"
 #import "AppointCoachViewController.h"
 #import "CoachDetailViewController.h"
-
-#import "MyCenterVC.h"
 #define EXERCISE_URL @"http://xiaobaxueche.com:8080/dadmin2.0.0/examination/index.jsp" // 正式服
 @interface ViewController ()<TabBarViewDelegate, UIWebViewDelegate>
 @property (strong, nonatomic) TabBarView *tabBarView;
@@ -19,7 +17,7 @@
 /**
  *
  */
-@property (nonatomic, strong)MyCenterVC *serveVC;
+//@property (nonatomic, strong)MyCenterVC *serveVC;
 /**
  *
  */

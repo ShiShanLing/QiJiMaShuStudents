@@ -323,7 +323,7 @@ typedef NS_OPTIONS(NSUInteger, OrderListType) {
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (orderState.intValue == 6) {
-        return  124;
+        return  96;
     }else {
         return 130;
     }

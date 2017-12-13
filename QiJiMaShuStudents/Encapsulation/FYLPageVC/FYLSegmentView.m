@@ -21,7 +21,7 @@
 
 - (FYLSegmentView *)initWithTitles:(NSArray *)titles{
     
-    if (self = [super initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 44)]) {
+    if (self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)]) {
         self.titles = titles;
         [self setupUI];
     }
@@ -45,14 +45,14 @@
     _itemWidth = SCREEN_WIDTH/_titles.count;
     
     if (self.titles.count > 5) {
-        _itemWidth = 64;
+        _itemWidth = 70;
     }
     
     for (int i = 0; i < _titles.count; i++) {
         UILabel *labelBottom = [[UILabel alloc] initWithFrame:CGRectMake(_itemWidth * i, 0, _itemWidth, 44)];
         labelBottom.text = _titles[i];
         labelBottom.textAlignment = NSTextAlignmentCenter;
-        labelBottom.font = [UIFont systemFontOfSize:16];
+        labelBottom.font = [UIFont systemFontOfSize:15];
         
         //未选中字体颜色
         labelBottom.textColor = FYLColorFromHexadecimalRGB(0x000000);
@@ -61,7 +61,7 @@
         UILabel *labelTop = [[UILabel alloc] initWithFrame:CGRectMake(_itemWidth * i, 0, _itemWidth, 44)];
         labelTop.text = _titles[i];
         labelTop.textAlignment = NSTextAlignmentCenter;
-        labelTop.font = [UIFont systemFontOfSize:16];
+        labelTop.font = [UIFont systemFontOfSize:15];
         
         //选中字体颜色
         labelTop.textColor = FYLColorFromHexadecimalRGB(0x93C4F6);

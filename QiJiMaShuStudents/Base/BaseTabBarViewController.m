@@ -9,7 +9,6 @@
 #import "BaseTabBarViewController.h"
 #import "HomePageVC.h"
 #import "CoachDetailViewController.h"
-#import "MyCenterVC.h"
 #import "TestLibraryVC.h"
 #import "StudentsCenterVC.h"
 #import "AppDelegate.h"
@@ -57,7 +56,7 @@
     topLine.x = 0;
     topLine.y = 0;
     topLine.backgroundColor = MColor(214, 214, 214);
-    [tabBarView itemsTitleConfig:@[@"知识", @"学骑马", @"预约", @"我的"]];
+    [tabBarView itemsTitleConfig:@[@"咨询", @"报名", @"培训", @"服务"]];
 }
 - (void)itemClick:(NSUInteger)itemIndex {
     

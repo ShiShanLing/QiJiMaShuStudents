@@ -10,8 +10,8 @@
 #import "BaseTabBarViewController.h"
 #import "SideBarViewController.h"
 #import <AlipaySDK/AlipaySDK.h>
-
-
+#import "AssistiveTouch.h"
+#import "MyOrderViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
 //腾讯开放平台（对应QQ和QQ空间）SDK头文件
@@ -21,12 +21,59 @@
 #import "WXApi.h"
 
 
-@interface AppDelegate ()
+@interface AppDelegate ()<AssistiveTouchDelegate>{
+    //悬浮框
+    AssistiveTouch * _Win;
+}
 
 @end
 
 @implementation AppDelegate
 
+-(void)setNew
+{
+    _Win = [[AssistiveTouch alloc] initWithFrame:CGRectMake(0, 100, 80, 80)];
+    _Win.delegate = self;
+}
+
+- (void)aKeyClickBookin {
+    
+    if ([UserDataSingleton mainSingleton].studentsId.length == 0) {
+        LogInViewController *FYLPageVC =[[LogInViewController alloc]init];
+        UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
+        [self.window.rootViewController setHidesBottomBarWhenPushed:YES];
+        [self.window.rootViewController presentViewController:NAVC animated:YES completion:nil];
+        
+        
+        return;
+    }
+    
+    NSString *URL_Str = [NSString stringWithFormat:@"%@/student/api/quickMakeReservation",kURL_SHY];
+    NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
+    URL_Dic[@"stuId"] =[UserDataSingleton mainSingleton].studentsId;
+    __weak  AppDelegate *VC = self;
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    [session POST:URL_Str parameters:URL_Dic progress:^(NSProgress * _Nonnull uploadProgress) {
+        NSLog(@"uploadProgress%@", uploadProgress);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"responseObject%@", responseObject);
+        NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
+        if ([resultStr isEqualToString:@"1"]) {
+            [VC showAlert:responseObject[@"msg"]];
+            MyOrderViewController *FYLPageVC =[[MyOrderViewController alloc]initWithNibName:@"MyOrderViewController" bundle:nil];
+            UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
+            [VC.window.rootViewController setHidesBottomBarWhenPushed:YES];
+            [VC.window.rootViewController presentViewController:NAVC animated:YES completion:nil];
+      
+        }else {
+            [VC showAlert:responseObject[@"msg"]];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error%@", error);
+    }];
+
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   /*
@@ -37,6 +84,12 @@
     @param configurationHandler (onConfiguration)
     配置回调处理，在此方法中根据设置的platformType来填充应用配置信息
     */
+    
+    // 这句话很重要，要先将rootview加载完成之后在显示悬浮框，如没有这句话，将可能造成程序崩溃
+    [self performSelector:@selector(setNew) withObject:nil afterDelay:3];
+    
+    [self.window makeKeyAndVisible];
+    
     
     [ShareSDK registerApp:@"21ed803626c70" activePlatforms:@[@(SSDKPlatformTypeWechat),
                                                              @(SSDKPlatformTypeQQ),] onImport:^(SSDKPlatformType platformType) {
@@ -72,7 +125,6 @@
     NSLog(@"didFinishLaunchingWithOptions%@", str?@"YES":@"NO");
     // 侧拉VC
     SideBarViewController *leftViewController = [[SideBarViewController alloc] init];
-    
     // 主VC
     BaseTabBarViewController *VC= [[BaseTabBarViewController alloc] init];
     self.window.rootViewController = VC;

@@ -86,14 +86,14 @@
     }
     return _viewControllerArray;
 }
-//骑马订单
+//报名订单
 - (IBAction)handleStudentDriverOrder:(UIButton *)sender {
     EnrollDetailsVC *VC = [[EnrollDetailsVC alloc] init];
     UINavigationController *NAVC = [[UINavigationController alloc] initWithRootViewController:VC];
     [self setHidesBottomBarWhenPushed:YES];
     [self presentViewController:NAVC animated:YES completion:nil];
 }
-//报名订单
+//马术学习订单
 - (IBAction)handleSignUpOrder:(UIButton *)sender {
     MyOrderViewController *FYLPageVC =[[MyOrderViewController alloc]initWithNibName:@"MyOrderViewController" bundle:nil];
     UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
@@ -102,42 +102,9 @@
     [self presentViewController:NAVC animated:YES completion:nil];
     
 }
-//预约考试
+
 - (IBAction)handleReservationTest:(UIButton *)sender {
-    __weak StudentsCenterVC *VC = self;
-    UIAlertController *alertV = [UIAlertController alertControllerWithTitle:@"提醒!" message:@"是否进行预约?" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"是的" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-        NSString *URL_Str = [NSString stringWithFormat:@"%@/exam/api/appointment",kURL_SHY];
-        NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
-        URL_Dic[@"stuId"] = [UserDataSingleton mainSingleton].studentsId;
-        NSLog(@"URL_Dic%@", URL_Dic);
-        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-        [session POST:URL_Str parameters:URL_Dic progress:^(NSProgress * _Nonnull uploadProgress) {
-            NSLog(@"uploadProgress%@", uploadProgress);
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"responseObject%@", responseObject);
-            NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
-            if ([resultStr isEqualToString:@"1"]) {
-                [VC showAlert:responseObject[@"msg"] time:1.2];
-            //    [VC AnalysisUserData];
-            }else {
-                [VC showAlert:responseObject[@"msg"] time:1.2];
-            }
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"error%@", error);
-        }];
-    }];
-    UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"我再想想" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        NSLog(@"对不起");
-    }];
-    // 3.将“取消”和“确定”按钮加入到弹框控制器中
-    [alertV addAction:cancle];
-    [alertV addAction:confirm];
-    // 4.控制器 展示弹框控件，完成时不做操作
-    [self presentViewController:alertV animated:YES completion:^{
-        nil;
-    }];
-    
+    [self showAlert:@"该功能未开通"];
 }
 //分享注册
 - (IBAction)handleShareRegistered:(UIButton *)sender {
@@ -298,7 +265,6 @@
             [userData setObject:urseDataDic[key] forKey:key];
             [model setValue:urseDataDic[key] forKey:key];
         }
-        
         //获取应用程序沙盒的Documents目录
         NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *plistPath1 = [paths objectAtIndex:0];
@@ -309,13 +275,12 @@
         //那怎么证明我的数据写入了呢？读出来看看
         NSMutableDictionary *userData2 = [[NSMutableDictionary alloc] initWithContentsOfFile:filename];
     }
-    self.userNameLabel.text = model.userName.length?@"未设置":model.userName;
+    self.userNameLabel.text = model.userName.length==0?@"未设置":model.userName;
     self.userPhoneLabel.text = model.phone;
     self.BalanceLabel.text = [NSString stringWithFormat:@"%d",model.balance];
     self.couponsLabel.text = [NSString stringWithFormat:@"%d",model.ticket];
     self.currencyLabel.text = [NSString stringWithFormat:@"%ld",model.points];
     NSString *subState;
-  
     self.studentDriverStateLabel.text = @"";
 }
 

@@ -320,6 +320,18 @@
                                     repeats:YES];
     [promptAlert show];
 }
+//网络加载指示器
+- (void)indeterminateExample {
+    
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];//加载指示器出现
+    
+}
+
+- (void)delayMethod{
+    
+    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];//加载指示器消失
+    
+}
 /*
 #pragma mark - Navigation
 

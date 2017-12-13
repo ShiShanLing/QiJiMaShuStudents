@@ -16,6 +16,7 @@
 		A10DBD021FE0C11300D20698 /* PayChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10DBCFE1FE0C11100D20698 /* PayChooseViewController.xib */; };
 		A10DBD031FE0C11300D20698 /* PayChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DBCFF1FE0C11200D20698 /* PayChooseViewController.m */; };
 		A10DBD041FE0C11300D20698 /* MethodPaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10DBD001FE0C11200D20698 /* MethodPaymentView.xib */; };
+		A10DBD071FE0F43100D20698 /* AssistiveTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DBD061FE0F43100D20698 /* AssistiveTouch.m */; };
 		A1541E431FC2AF8200D84AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1541E411FC2AF8200D84AC6 /* Main.storyboard */; };
 		A1541E461FC2AF8200D84AC6 /* QiJiMaShuStudents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1541E441FC2AF8200D84AC6 /* QiJiMaShuStudents.xcdatamodeld */; };
 		A1541E481FC2AF8200D84AC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1541E471FC2AF8200D84AC6 /* Assets.xcassets */; };
@@ -102,13 +103,8 @@
 		A1DEB3DD1FC2B4D600F45256 /* CouponsModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB2401FC2B4CC00F45256 /* CouponsModel+CoreDataProperties.m */; };
 		A1DEB3DE1FC2B4D600F45256 /* CouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB2431FC2B4CC00F45256 /* CouponTableViewCell.m */; };
 		A1DEB3DF1FC2B4D600F45256 /* CouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB2441FC2B4CC00F45256 /* CouponTableViewCell.xib */; };
-		A1DEB3E41FC2B4D600F45256 /* MyCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB24D1FC2B4CC00F45256 /* MyCenterVC.m */; };
-		A1DEB3E51FC2B4D600F45256 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB24F1FC2B4CC00F45256 /* MyViewController.m */; };
-		A1DEB3E61FC2B4D600F45256 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB2501FC2B4CC00F45256 /* MyViewController.xib */; };
 		A1DEB3E71FC2B4D600F45256 /* StudentsCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB2521FC2B4CC00F45256 /* StudentsCenterVC.m */; };
 		A1DEB3E81FC2B4D600F45256 /* StudentsCenterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB2531FC2B4CC00F45256 /* StudentsCenterVC.xib */; };
-		A1DEB3E91FC2B4D600F45256 /* XBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB2551FC2B4CC00F45256 /* XBWebViewController.m */; };
-		A1DEB3EA1FC2B4D600F45256 /* XBWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB2561FC2B4CC00F45256 /* XBWebViewController.xib */; };
 		A1DEB3EB1FC2B4D600F45256 /* ForgotPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB2591FC2B4CC00F45256 /* ForgotPasswordVC.m */; };
 		A1DEB3EC1FC2B4D600F45256 /* BindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB25D1FC2B4CC00F45256 /* BindingViewController.m */; };
 		A1DEB3ED1FC2B4D600F45256 /* BindingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB25E1FC2B4CC00F45256 /* BindingViewController.xib */; };
@@ -298,6 +294,8 @@
 		A10DBCFE1FE0C11100D20698 /* PayChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayChooseViewController.xib; sourceTree = "<group>"; };
 		A10DBCFF1FE0C11200D20698 /* PayChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayChooseViewController.m; sourceTree = "<group>"; };
 		A10DBD001FE0C11200D20698 /* MethodPaymentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MethodPaymentView.xib; sourceTree = "<group>"; };
+		A10DBD051FE0F43100D20698 /* AssistiveTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssistiveTouch.h; sourceTree = "<group>"; };
+		A10DBD061FE0F43100D20698 /* AssistiveTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssistiveTouch.m; sourceTree = "<group>"; };
 		A1541E381FC2AF8200D84AC6 /* QiJiMaShuStudents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiJiMaShuStudents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1541E421FC2AF8200D84AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1541E451FC2AF8200D84AC6 /* QiJiMaShuStudents.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QiJiMaShuStudents.xcdatamodel; sourceTree = "<group>"; };
@@ -438,17 +436,9 @@
 		A1DEB2421FC2B4CC00F45256 /* CouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponTableViewCell.h; sourceTree = "<group>"; };
 		A1DEB2431FC2B4CC00F45256 /* CouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponTableViewCell.m; sourceTree = "<group>"; };
 		A1DEB2441FC2B4CC00F45256 /* CouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponTableViewCell.xib; sourceTree = "<group>"; };
-		A1DEB24C1FC2B4CC00F45256 /* MyCenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterVC.h; sourceTree = "<group>"; };
-		A1DEB24D1FC2B4CC00F45256 /* MyCenterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterVC.m; sourceTree = "<group>"; };
-		A1DEB24E1FC2B4CC00F45256 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		A1DEB24F1FC2B4CC00F45256 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		A1DEB2501FC2B4CC00F45256 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		A1DEB2511FC2B4CC00F45256 /* StudentsCenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentsCenterVC.h; sourceTree = "<group>"; };
 		A1DEB2521FC2B4CC00F45256 /* StudentsCenterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentsCenterVC.m; sourceTree = "<group>"; };
 		A1DEB2531FC2B4CC00F45256 /* StudentsCenterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentsCenterVC.xib; sourceTree = "<group>"; };
-		A1DEB2541FC2B4CC00F45256 /* XBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBWebViewController.h; sourceTree = "<group>"; };
-		A1DEB2551FC2B4CC00F45256 /* XBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBWebViewController.m; sourceTree = "<group>"; };
-		A1DEB2561FC2B4CC00F45256 /* XBWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XBWebViewController.xib; sourceTree = "<group>"; };
 		A1DEB2581FC2B4CC00F45256 /* ForgotPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordVC.h; sourceTree = "<group>"; };
 		A1DEB2591FC2B4CC00F45256 /* ForgotPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordVC.m; sourceTree = "<group>"; };
 		A1DEB25C1FC2B4CC00F45256 /* BindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindingViewController.h; sourceTree = "<group>"; };
@@ -1214,17 +1204,9 @@
 		A1DEB2461FC2B4CC00F45256 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				A1DEB24C1FC2B4CC00F45256 /* MyCenterVC.h */,
-				A1DEB24D1FC2B4CC00F45256 /* MyCenterVC.m */,
-				A1DEB24E1FC2B4CC00F45256 /* MyViewController.h */,
-				A1DEB24F1FC2B4CC00F45256 /* MyViewController.m */,
-				A1DEB2501FC2B4CC00F45256 /* MyViewController.xib */,
 				A1DEB2511FC2B4CC00F45256 /* StudentsCenterVC.h */,
 				A1DEB2521FC2B4CC00F45256 /* StudentsCenterVC.m */,
 				A1DEB2531FC2B4CC00F45256 /* StudentsCenterVC.xib */,
-				A1DEB2541FC2B4CC00F45256 /* XBWebViewController.h */,
-				A1DEB2551FC2B4CC00F45256 /* XBWebViewController.m */,
-				A1DEB2561FC2B4CC00F45256 /* XBWebViewController.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1650,6 +1632,8 @@
 				A1DEB31B1FC2B4D200F45256 /* SideBarViewController.m */,
 				A1DEB31C1FC2B4D200F45256 /* SideBarViewController.xib */,
 				A1DEB31D1FC2B4D200F45256 /* UserLogInData.plist */,
+				A10DBD051FE0F43100D20698 /* AssistiveTouch.h */,
+				A10DBD061FE0F43100D20698 /* AssistiveTouch.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -2133,7 +2117,6 @@
 				A1DEB44E1FC2B4D600F45256 /* SureOrderViewController.xib in Resources */,
 				A1DEB3A51FC2B4D600F45256 /* AccountViewController.xib in Resources */,
 				A1DEB4741FC2B4D600F45256 /* FeeItemizationsTVCell.xib in Resources */,
-				A1DEB3E61FC2B4D600F45256 /* MyViewController.xib in Resources */,
 				A1DEB4811FC2B4D600F45256 /* test1.png in Resources */,
 				A1DEB44A1FC2B4D600F45256 /* UserLogInData.plist in Resources */,
 				A1DEB3EF1FC2B4D600F45256 /* FindPwdViewController.xib in Resources */,
@@ -2147,7 +2130,6 @@
 				A1DEB4591FC2B4D600F45256 /* CoachScreenViewController.xib in Resources */,
 				A1DEB3CB1FC2B4D600F45256 /* UserInfoHomeViewController.xib in Resources */,
 				A1DEB4801FC2B4D600F45256 /* LearnCarShowTVCell.xib in Resources */,
-				A1DEB3EA1FC2B4D600F45256 /* XBWebViewController.xib in Resources */,
 				A1DEB4371FC2B4D600F45256 /* 8.png in Resources */,
 				A1DEB41A1FC2B4D600F45256 /* DSPullToRefreshIcon@2x.png in Resources */,
 				A1DEB3C51FC2B4D600F45256 /* ImproveInfoViewController.xib in Resources */,
@@ -2254,7 +2236,6 @@
 				A1DEB45F1FC2B4D600F45256 /* CoachDetailsModel+CoreDataClass.m in Sources */,
 				A1DEB3C61FC2B4D600F45256 /* LearnDriveInfoViewController.m in Sources */,
 				A1DEB3B91FC2B4D600F45256 /* GoodsOrderDetailsModel+CoreDataProperties.m in Sources */,
-				A1DEB3E91FC2B4D600F45256 /* XBWebViewController.m in Sources */,
 				A1DEB4051FC2B4D600F45256 /* NSData+AES.m in Sources */,
 				A1DEB3A01FC2B4D600F45256 /* AccountListViewController.m in Sources */,
 				A1DEB43B1FC2B4D600F45256 /* OrderTimeList.m in Sources */,
@@ -2279,6 +2260,7 @@
 				A1DEB4431FC2B4D600F45256 /* BaseTabBarViewController.m in Sources */,
 				A1DEB3AF1FC2B4D600F45256 /* TradingRecordsModel+CoreDataProperties.m in Sources */,
 				A1DEB3DA1FC2B4D600F45256 /* CouponListViewController.m in Sources */,
+				A10DBD071FE0F43100D20698 /* AssistiveTouch.m in Sources */,
 				A1DEB4021FC2B4D600F45256 /* ServiceDisplayTVCell.m in Sources */,
 				A1DEB4141FC2B4D600F45256 /* FYLPageViewController.m in Sources */,
 				A1DEB4511FC2B4D600F45256 /* SureOrderTableViewCell.m in Sources */,
@@ -2335,14 +2317,12 @@
 				A1DEB4011FC2B4D600F45256 /* MyOrderCViewCell.m in Sources */,
 				A1DEB4651FC2B4D600F45256 /* ViewController.m in Sources */,
 				A1DEB3D51FC2B4D600F45256 /* OrderTimeModel+CoreDataProperties.m in Sources */,
-				A1DEB3E41FC2B4D600F45256 /* MyCenterVC.m in Sources */,
 				A1DEB41D1FC2B4D600F45256 /* SwipeView.m in Sources */,
 				A1DEB4561FC2B4D600F45256 /* CoachDetailViewController.m in Sources */,
 				A1DEB4221FC2B4D600F45256 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				A1DEB4481FC2B4D600F45256 /* SideBarViewController.m in Sources */,
 				A1DEB3BA1FC2B4D600F45256 /* AboutViewController.m in Sources */,
 				A1DEB4151FC2B4D600F45256 /* FYLSegmentView.m in Sources */,
-				A1DEB3E51FC2B4D600F45256 /* MyViewController.m in Sources */,
 				A1DEB41E1FC2B4D600F45256 /* TabBarView.m in Sources */,
 				A1DEB4191FC2B4D600F45256 /* DSBottomPullToMoreView.m in Sources */,
 				A1DEB3B21FC2B4D600F45256 /* CoinListTableViewCell.m in Sources */,
@@ -2566,7 +2546,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QiJiMaShuStudents/QiJiMaShuStudents.pch";
 				INFOPLIST_FILE = QiJiMaShuStudents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cheZhiLianCoach.www-iOSApp.QiJiMaShuStudents";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.QiJIMaShuStudenrs.www-iOSApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2586,7 +2566,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QiJiMaShuStudents/QiJiMaShuStudents.pch";
 				INFOPLIST_FILE = QiJiMaShuStudents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cheZhiLianCoach.www-iOSApp.QiJiMaShuStudents";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.QiJIMaShuStudenrs.www-iOSApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -13,7 +13,6 @@
 #import "SettingBindingViewController.h"
 #import "AppDelegate.h"
 #import "ComplaintViewController.h"
-#import "XBWebViewController.h"
 @interface SettingViewController ()
 @property (strong, nonatomic) IBOutlet UIView *msgView;
 @property (strong, nonatomic) IBOutlet UILabel *cacheLabel;
@@ -139,11 +138,11 @@
 //陪驾协议
 - (IBAction)protocolClick:(id)sender {
     NSString *url = @"http://www.xiaobaxueche.com/serviceprotocol-s.html";
-    XBWebViewController *nextVC = [[XBWebViewController alloc] init];
-    nextVC.mainUrl = url;
-    nextVC.titleStr = @"陪驾服务协议";
-    nextVC.closeBtnHidden = YES;
-    [self.navigationController pushViewController:nextVC animated:YES];
+//    XBWebViewController *nextVC = [[XBWebViewController alloc] init];
+//    nextVC.mainUrl = url;
+//    nextVC.titleStr = @"陪驾服务协议";
+//    nextVC.closeBtnHidden = YES;
+//    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
 //退出登录
