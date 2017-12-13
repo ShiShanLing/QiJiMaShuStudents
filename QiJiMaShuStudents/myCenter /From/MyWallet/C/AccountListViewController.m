@@ -84,7 +84,7 @@
 // 获取钱包信息
 - (void)postGetWalletInfo {
     // 累计消费
-    self.usedLabel.text = [NSString stringWithFormat:@"金额%d元 骑马币%d个 学时券%d张", 100, 100, 100];
+    self.usedLabel.text = [NSString stringWithFormat:@"金额%d元 骑马币%d个 鞍时券%d张", 100, 100, 100];
     [self showData];
 
 }

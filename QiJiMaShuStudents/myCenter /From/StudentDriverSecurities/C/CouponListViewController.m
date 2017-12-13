@@ -143,8 +143,8 @@
         cell.couponTitleLabel.text = @"满减券";
         cell.labeltitle2.text = [NSString stringWithFormat:@"满%d元抵用%d元",model.couponLimit, model.couponPrice];
     }else{
-        cell.couponTitleLabel.text = @"学时券";
-        cell.labeltitle2.text = [NSString stringWithFormat:@"本券可以抵用%d学时学费",model.couponDuration];
+        cell.couponTitleLabel.text = @"鞍时券";
+        cell.labeltitle2.text = [NSString stringWithFormat:@"本券可以抵用%d鞍时学费",model.couponDuration];
     }
     cell.couponPublishLabel.text = model.couponDesc;
     cell.couponEndTime.text = [NSString stringWithFormat:@"到期时间:%@",[CommonUtil getStringForDate:model.endTime]];
@@ -154,7 +154,7 @@
     }else {
         cell.couponStateLabel.text = @"已使用";
     }
-    //如果type是1 那么代表上个界面还需要看满减券 那么就把学时券黑掉
+    //如果type是1 那么代表上个界面还需要看满减券 那么就把鞍时券黑掉
     NSLog(@"cellForRowAtIndexPath%@", self.type);
     if ([self.type isEqualToString:@"1"]) {
         

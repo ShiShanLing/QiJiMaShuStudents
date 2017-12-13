@@ -18,8 +18,8 @@
     int _validCouponNum; // 可用骑马券总数
     int _validCoinNum; // 可用骑马币总数
     float _validMoney; // 余额总数
-    int _remainderCouponNum; // 剩余学时券数
-    int _remainderCoinNum; // 剩余学时币数
+    int _remainderCouponNum; // 剩余鞍时券数
+    int _remainderCoinNum; // 剩余鞍时币数
     float _remainderMoney; // 剩余余额
 }
 
@@ -281,7 +281,7 @@
         payTypeLabel.text = [NSString stringWithFormat:@"%ld元抵用券", couponsAmounte];
     }
     if (couponsType.intValue == 1) {//学时券
-        payTypeLabel.text = [NSString stringWithFormat:@"%ld学时抵用券", couponsAmounte];
+        payTypeLabel.text = [NSString stringWithFormat:@"%ld鞍时抵用券", couponsAmounte];
     }
     if (couponsType.length == 0) {
         if (self.priceSum.floatValue > [UserDataSingleton mainSingleton].balance.floatValue) {

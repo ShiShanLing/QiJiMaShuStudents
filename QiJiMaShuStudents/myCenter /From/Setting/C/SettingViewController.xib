@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -270,7 +270,7 @@
                         <constraint firstItem="bvv-3y-ICJ" firstAttribute="leading" secondItem="izP-H9-Vvx" secondAttribute="leading" id="zSP-Cj-kNx"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B28-9u-kUQ" userLabel="陪驾协议">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B28-9u-kUQ" userLabel="陪教协议">
                     <rect key="frame" x="0.0" y="248" width="600" height="62"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_userinfohome" translatesAutoresizingMaskIntoConstraints="NO" id="s6e-ts-aan">
@@ -284,7 +284,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
                             <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="titleEdgeInsets" minX="6" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="陪驾服务协议" image="icon_link">
+                            <state key="normal" title="陪教马术服务协议" image="icon_link">
                                 <color key="titleColor" red="0.18220192193984985" green="0.18219646811485291" blue="0.18219956755638123" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
