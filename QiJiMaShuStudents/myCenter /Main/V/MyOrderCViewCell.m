@@ -85,89 +85,9 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kURL_SHY, model.avatar]];
     [_floorView.TextImage sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"logo.jpg"] options:1];
     if ([UserDataSingleton mainSingleton].subState.length == 0) {
-        _subjectsShow.text = @"等待预约考试";
+        _subjectsShow.text = @"等待预约学习骑马!";
     }
-    switch (model.subState) {
-        case 0:
-            switch (model.state) {
-                case 0:
-                    _subjectsShow.text = @"等待预约科目一考试";
-                    break;
-                case 1:
-                    _subjectsShow.text = @"科一预约等待审核";
-                    break;
-                case 2:
-                    _subjectsShow.text = @"科一考试预约成功,等待考试!";
-                    break;
-                case 3:
-                    _subjectsShow.text = @"等待预约科目一";
-                    break;
-                default:
-                    break;
-            }
-            
-            break;
-        case 1:
-            switch ([UserDataSingleton mainSingleton].state.intValue) {
-                case 0:
-                    _subjectsShow.text = @"等待预约科目二考试";
-                    break;
-                case 1:
-                    _subjectsShow.text = @"科二预约等待审核";
-                    break;
-                case 2:
-                    _subjectsShow.text = @"科二考试预约成功,等待考试!";
-                    break;
-                case 3:
-                    _subjectsShow.text = @"等待预约科目二考试";
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 2:
-            switch ([UserDataSingleton mainSingleton].state.intValue) {
-                case 0:
-                    _subjectsShow.text = @"等待预约科目三考试";
-                    break;
-                case 1:
-                    _subjectsShow.text = @"科三预约等待审核";
-                    break;
-                case 2:
-                    _subjectsShow.text = @"科三考试预约成功,等待考试!";
-                    break;
-                case 3:
-                    _subjectsShow.text = @"等待预约科目三考试";
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 3:
-            switch ([UserDataSingleton mainSingleton].state.intValue) {
-                case 0:
-                    _subjectsShow.text = @"等待预约科目四考试";
-                    break;
-                case 1:
-                    _subjectsShow.text = @"科四预约等待审核";
-                    break;
-                case 2:
-                    _subjectsShow.text = @"科四考试预约成功,等待考试!";
-                    break;
-                case 3:
-                    _subjectsShow.text = @"等待预约科目四考试";
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 4:
-            _subjectsShow.text = @"科四考试已经通过";
-            break;
-        default:
-            break;
-    }
-    
+  
     
     
 }

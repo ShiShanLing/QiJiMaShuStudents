@@ -326,7 +326,7 @@
             VC.type = @"1";
             NSLog(@"firstMoney%@", firstMoney);
             VC.payAmount = _goodsDetailsModel.goodsStorePrice;
-             VC.obtainCoupons = ^(NSString *couponsID, NSInteger amount,NSString *type) {
+             VC.obtainCoupons = ^(NSString *couponsID, NSInteger amount,NSString *type,NSString *couponsTitle) {
                 NSLog(@"couponsID%@ amount%d type%@", couponsID, amount, type);
                 couponMemberId = couponsID;
                 couponsAmounte = amount;

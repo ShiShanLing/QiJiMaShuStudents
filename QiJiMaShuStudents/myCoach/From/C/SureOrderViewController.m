@@ -444,7 +444,7 @@
             VC.type = @"2";//
             VC.courseNum = self.dateTimeSelectedList.count;
             VC.payAmount =self.priceSum.floatValue;
-            VC.obtainCoupons = ^(NSString *couponsID, NSInteger amount,NSString *type) {
+            VC.obtainCoupons = ^(NSString *couponsID, NSInteger amount,NSString *type,NSString *couponsTitle) {
                 NSLog(@"couponsID%@ amount%d type%@", couponsID,amount,type);
                 couponMemberId = couponsID;
                 couponsAmounte = amount;

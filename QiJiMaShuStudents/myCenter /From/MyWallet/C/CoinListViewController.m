@@ -92,7 +92,7 @@
     self.contentViewTopSpace.constant = self.headView.height;
 }
 
-- (UIView *)ownerItemCreate:(NSDictionary *)dict index:(int)index needLine:(BOOL)need {
+- (UIView *)ownerItemCreate:(NSDictionary *)dict index:(int)index needLine:(BOOL)need {    
     UIView *itemView = [[UIView alloc] init];
     CGFloat itemViewW = kScreen_widht;
     CGFloat itemViewH = ITEM_HEIGHT;

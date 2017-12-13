@@ -34,7 +34,7 @@
         [self.contentView addSubview:_timeLabel];
         // 科目标识
         self.SubjectName = [[UILabel alloc] initWithFrame:CGRectMake(0, kFit(35), frame.size.width, kFit(13))];
-        _SubjectName.text = @"科目三";
+        _SubjectName.text = @"中级课程";
         _SubjectName.textColor = [UIColor colorWithRed:52 green:136 blue:153 alpha:1.0];
         _SubjectName.textAlignment = 1;
         _SubjectName.font = [UIFont systemFontOfSize:kFit(12)];
@@ -87,9 +87,9 @@
                     _SubjectName.text = nil;
                     
                     if (model.subType == 2) {
-                        _SubjectName.text = @"科目二";
+                        _SubjectName.text = @"初级课程";
                     }else if (model.subType == 3){
-                        _SubjectName.text = @"科目三";
+                        _SubjectName.text = @"中级课程";
                     }else {
                         _SubjectName.text = @"未开课";
                     }

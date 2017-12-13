@@ -27,6 +27,8 @@
 @dynamic schoolId;
 @dynamic state;
 @dynamic schoolName;
+@dynamic coachName;
+@dynamic phone;
 - (void)setValue:(id)value forKey:(NSString *)key {
     if ([key isEqualToString:@"createTime"]) {
         NSString *str=[NSString stringWithFormat:@"%@", value];

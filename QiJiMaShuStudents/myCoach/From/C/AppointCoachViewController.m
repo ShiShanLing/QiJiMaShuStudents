@@ -45,7 +45,7 @@ static  BOOL EditTime;
 @property (weak, nonatomic) IBOutlet UILabel *carCostLabel;
 @property (weak, nonatomic) IBOutlet UIButton *ifNeedCarSureBtn;
 @property (assign, nonatomic) BOOL needCar;
-@property (assign, nonatomic) int rentalFeePerHour; // 马匹租赁费(每小时)
+@property (assign, nonatomic) int rentalFeePerHour; // 马匹租赁费(每鞍时)
 
 @property (strong, nonatomic) UIView *coachTimeContentView;
 //@property (strong, nonatomic) NSMutableArray *timeMutableList;      // 时间点数据数组 用于存储各个时间点的数据 单价、科目、时间
@@ -256,9 +256,7 @@ static  BOOL EditTime;
 }
 #pragma mark - 页面配置
 - (void)viewConfig {
-   
     [self.phoneBtn setTitle:@"13646712075" forState:UIControlStateNormal];
-    
     // 教练综合评分
     TQStarRatingView *starView = [[TQStarRatingView alloc] initWithFrame:CGRectMake(10, 27, 88, 15)];
     [starView changeStarForegroundViewWithScore:5.0];
@@ -277,7 +275,6 @@ static  BOOL EditTime;
 }
 // 重新计算总价
 - (void)resetPriceNumStatus {
-    
     NSLog(@" self.dateArray%@",  self.dateArray);
     
     CGFloat unitPrice = 0.0;
@@ -292,15 +289,14 @@ static  BOOL EditTime;
     }
     // 控制各控件的显示/隐藏
     if (unitPrice > 0 ) {
-        self.timeNumLabel.text = [NSString stringWithFormat:@"已选择%lu个小时", (unsigned long)selectedTimeArray.count];
+        self.timeNumLabel.text = [NSString stringWithFormat:@"已选择%lu个鞍时", (unsigned long)selectedTimeArray.count];
         self.priceSumLabel.text = [NSString stringWithFormat:@"合计%.2f元", unitPrice];
         self.timePriceView.hidden = NO;
         self.noTimeSelectedLabel.hidden = YES;
         self.sureAppointBtn.enabled = YES;
         self.priceSumLabel.hidden = NO;
-        
     }else{
-        self.timeNumLabel.text = [NSString stringWithFormat:@"已选择0个小时"];
+        self.timeNumLabel.text = [NSString stringWithFormat:@"已选择0个鞍时"];
         self.priceSumLabel.text = [NSString stringWithFormat:@"合计0.00元"];
         self.timePriceView.hidden = YES;
         self.noTimeSelectedLabel.hidden = NO;
@@ -599,7 +595,7 @@ static  BOOL EditTime;
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreen_widht, 30)];
         titleLabel.textAlignment = 1;
         titleLabel.textColor =  MColor(203, 203, 203);
-        titleLabel.text = @"您预约的时间是指.预约后的一个小时";
+        titleLabel.text = @"您预约的时间是指.预约后的一个鞍时";
         titleLabel.font = [UIFont systemFontOfSize:12];
         [view addSubview:titleLabel];
         return view;

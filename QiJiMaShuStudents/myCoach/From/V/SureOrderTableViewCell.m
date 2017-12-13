@@ -21,7 +21,7 @@
     // Configure the view for the selected state
 }
 -(void)setModel:(CoachTimeListModel *)model {
-    self.timeLabel.text = [NSString stringWithFormat:@"%@(开始后的一个小时)", model.timeStr];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@(开始后的一个鞍时)", model.timeStr];
     self.priceLabel.text = [NSString stringWithFormat:@"%.2f元", model.unitPrice];
 }
 

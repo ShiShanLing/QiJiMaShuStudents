@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		89BECC58E6C1F35B0ABF8B04 /* libPods-QiJiMaShuStudents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD5E870D822C564B5D4389A /* libPods-QiJiMaShuStudents.a */; };
+		A10DBCF21FE0BF2900D20698 /* QuickBookingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DBCEF1FE0BF2800D20698 /* QuickBookingViewCell.m */; };
+		A10DBCF31FE0BF2900D20698 /* QuickBookingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10DBCF01FE0BF2900D20698 /* QuickBookingViewCell.xib */; };
+		A10DBCF91FE0C07C00D20698 /* CLCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DBCF71FE0C07C00D20698 /* CLCycleView.m */; };
+		A10DBCFA1FE0C07C00D20698 /* CLPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DBCF81FE0C07C00D20698 /* CLPageControl.m */; };
+		A10DBD011FE0C11300D20698 /* MethodPaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DBCFC1FE0C11000D20698 /* MethodPaymentView.m */; };
+		A10DBD021FE0C11300D20698 /* PayChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10DBCFE1FE0C11100D20698 /* PayChooseViewController.xib */; };
+		A10DBD031FE0C11300D20698 /* PayChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10DBCFF1FE0C11200D20698 /* PayChooseViewController.m */; };
+		A10DBD041FE0C11300D20698 /* MethodPaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10DBD001FE0C11200D20698 /* MethodPaymentView.xib */; };
 		A1541E431FC2AF8200D84AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1541E411FC2AF8200D84AC6 /* Main.storyboard */; };
 		A1541E461FC2AF8200D84AC6 /* QiJiMaShuStudents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1541E441FC2AF8200D84AC6 /* QiJiMaShuStudents.xcdatamodeld */; };
 		A1541E481FC2AF8200D84AC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1541E471FC2AF8200D84AC6 /* Assets.xcassets */; };
@@ -94,10 +102,6 @@
 		A1DEB3DD1FC2B4D600F45256 /* CouponsModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB2401FC2B4CC00F45256 /* CouponsModel+CoreDataProperties.m */; };
 		A1DEB3DE1FC2B4D600F45256 /* CouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB2431FC2B4CC00F45256 /* CouponTableViewCell.m */; };
 		A1DEB3DF1FC2B4D600F45256 /* CouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB2441FC2B4CC00F45256 /* CouponTableViewCell.xib */; };
-		A1DEB3E01FC2B4D600F45256 /* cheZhiLian.ipa in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB2481FC2B4CC00F45256 /* cheZhiLian.ipa */; };
-		A1DEB3E11FC2B4D600F45256 /* DistributionSummary.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB2491FC2B4CC00F45256 /* DistributionSummary.plist */; };
-		A1DEB3E21FC2B4D600F45256 /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB24A1FC2B4CC00F45256 /* ExportOptions.plist */; };
-		A1DEB3E31FC2B4D600F45256 /* Packaging.log in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB24B1FC2B4CC00F45256 /* Packaging.log */; };
 		A1DEB3E41FC2B4D600F45256 /* MyCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB24D1FC2B4CC00F45256 /* MyCenterVC.m */; };
 		A1DEB3E51FC2B4D600F45256 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB24F1FC2B4CC00F45256 /* MyViewController.m */; };
 		A1DEB3E61FC2B4D600F45256 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB2501FC2B4CC00F45256 /* MyViewController.xib */; };
@@ -281,6 +285,19 @@
 /* Begin PBXFileReference section */
 		67B3011A8A0CDF06F906B368 /* Pods-QiJiMaShuStudents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiJiMaShuStudents.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiJiMaShuStudents/Pods-QiJiMaShuStudents.release.xcconfig"; sourceTree = "<group>"; };
 		7CD5E870D822C564B5D4389A /* libPods-QiJiMaShuStudents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QiJiMaShuStudents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10DBCEF1FE0BF2800D20698 /* QuickBookingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickBookingViewCell.m; sourceTree = "<group>"; };
+		A10DBCF01FE0BF2900D20698 /* QuickBookingViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuickBookingViewCell.xib; sourceTree = "<group>"; };
+		A10DBCF11FE0BF2900D20698 /* QuickBookingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickBookingViewCell.h; sourceTree = "<group>"; };
+		A10DBCF51FE0C07C00D20698 /* CLPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLPageControl.h; sourceTree = "<group>"; };
+		A10DBCF61FE0C07C00D20698 /* CLCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCycleView.h; sourceTree = "<group>"; };
+		A10DBCF71FE0C07C00D20698 /* CLCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCycleView.m; sourceTree = "<group>"; };
+		A10DBCF81FE0C07C00D20698 /* CLPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLPageControl.m; sourceTree = "<group>"; };
+		A10DBCFB1FE0C11000D20698 /* MethodPaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodPaymentView.h; sourceTree = "<group>"; };
+		A10DBCFC1FE0C11000D20698 /* MethodPaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodPaymentView.m; sourceTree = "<group>"; };
+		A10DBCFD1FE0C11100D20698 /* PayChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayChooseViewController.h; sourceTree = "<group>"; };
+		A10DBCFE1FE0C11100D20698 /* PayChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayChooseViewController.xib; sourceTree = "<group>"; };
+		A10DBCFF1FE0C11200D20698 /* PayChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayChooseViewController.m; sourceTree = "<group>"; };
+		A10DBD001FE0C11200D20698 /* MethodPaymentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MethodPaymentView.xib; sourceTree = "<group>"; };
 		A1541E381FC2AF8200D84AC6 /* QiJiMaShuStudents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiJiMaShuStudents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1541E421FC2AF8200D84AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1541E451FC2AF8200D84AC6 /* QiJiMaShuStudents.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QiJiMaShuStudents.xcdatamodel; sourceTree = "<group>"; };
@@ -421,10 +438,6 @@
 		A1DEB2421FC2B4CC00F45256 /* CouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponTableViewCell.h; sourceTree = "<group>"; };
 		A1DEB2431FC2B4CC00F45256 /* CouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponTableViewCell.m; sourceTree = "<group>"; };
 		A1DEB2441FC2B4CC00F45256 /* CouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponTableViewCell.xib; sourceTree = "<group>"; };
-		A1DEB2481FC2B4CC00F45256 /* cheZhiLian.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = cheZhiLian.ipa; sourceTree = "<group>"; };
-		A1DEB2491FC2B4CC00F45256 /* DistributionSummary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DistributionSummary.plist; sourceTree = "<group>"; };
-		A1DEB24A1FC2B4CC00F45256 /* ExportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
-		A1DEB24B1FC2B4CC00F45256 /* Packaging.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Packaging.log; sourceTree = "<group>"; };
 		A1DEB24C1FC2B4CC00F45256 /* MyCenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterVC.h; sourceTree = "<group>"; };
 		A1DEB24D1FC2B4CC00F45256 /* MyCenterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterVC.m; sourceTree = "<group>"; };
 		A1DEB24E1FC2B4CC00F45256 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
@@ -728,6 +741,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A10DBCF41FE0C07C00D20698 /* CLCycleView */ = {
+			isa = PBXGroup;
+			children = (
+				A10DBCF51FE0C07C00D20698 /* CLPageControl.h */,
+				A10DBCF61FE0C07C00D20698 /* CLCycleView.h */,
+				A10DBCF71FE0C07C00D20698 /* CLCycleView.m */,
+				A10DBCF81FE0C07C00D20698 /* CLPageControl.m */,
+			);
+			name = CLCycleView;
+			path = ../../../QiJiMaShuStudents/QiJiMaShuStudents/Encapsulation/CLCycleView;
+			sourceTree = "<group>";
+		};
 		A1541E2F1FC2AF8200D84AC6 = {
 			isa = PBXGroup;
 			children = (
@@ -761,7 +786,6 @@
 				A1DEB2881FC2B4CE00F45256 /* Encapsulation */,
 				A1DEB30F1FC2B4D200F45256 /* hashiqi.png */,
 				A1DEB3571FC2B4D500F45256 /* homePage */,
-				A1DEB3521FC2B4D400F45256 /* learning */,
 				A1DEB2F31FC2B4CF00F45256 /* methods */,
 				A1DEB1A61FC2B4CC00F45256 /* myCenter  */,
 				A1DEB31E1FC2B4D300F45256 /* myCoach */,
@@ -872,7 +896,6 @@
 			isa = PBXGroup;
 			children = (
 				A1DEB1BA1FC2B4CC00F45256 /* C */,
-				A1DEB1C11FC2B4CC00F45256 /* M */,
 				A1DEB1C21FC2B4CC00F45256 /* V */,
 			);
 			path = MessageInform;
@@ -889,13 +912,6 @@
 				A1DEB1C01FC2B4CC00F45256 /* SystemMessageViewController.xib */,
 			);
 			path = C;
-			sourceTree = "<group>";
-		};
-		A1DEB1C11FC2B4CC00F45256 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
 			sourceTree = "<group>";
 		};
 		A1DEB1C21FC2B4CC00F45256 /* V */ = {
@@ -1015,8 +1031,6 @@
 			isa = PBXGroup;
 			children = (
 				A1DEB1F81FC2B4CC00F45256 /* C */,
-				A1DEB2081FC2B4CC00F45256 /* M */,
-				A1DEB2091FC2B4CC00F45256 /* V */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1043,26 +1057,11 @@
 			path = C;
 			sourceTree = "<group>";
 		};
-		A1DEB2081FC2B4CC00F45256 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		A1DEB2091FC2B4CC00F45256 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
 		A1DEB20A1FC2B4CC00F45256 /* StudentData */ = {
 			isa = PBXGroup;
 			children = (
 				A1DEB20B1FC2B4CC00F45256 /* C */,
 				A1DEB2181FC2B4CC00F45256 /* M */,
-				A1DEB2211FC2B4CC00F45256 /* V */,
 			);
 			path = StudentData;
 			sourceTree = "<group>";
@@ -1101,13 +1100,6 @@
 			path = M;
 			sourceTree = "<group>";
 		};
-		A1DEB2211FC2B4CC00F45256 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
 		A1DEB2221FC2B4CC00F45256 /* StudentDriverOrder */ = {
 			isa = PBXGroup;
 			children = (
@@ -1127,6 +1119,12 @@
 				A1DEB2271FC2B4CC00F45256 /* MyOrderViewController.h */,
 				A1DEB2281FC2B4CC00F45256 /* MyOrderViewController.m */,
 				A1DEB2291FC2B4CC00F45256 /* MyOrderViewController.xib */,
+				A10DBCFB1FE0C11000D20698 /* MethodPaymentView.h */,
+				A10DBCFC1FE0C11000D20698 /* MethodPaymentView.m */,
+				A10DBD001FE0C11200D20698 /* MethodPaymentView.xib */,
+				A10DBCFD1FE0C11100D20698 /* PayChooseViewController.h */,
+				A10DBCFF1FE0C11200D20698 /* PayChooseViewController.m */,
+				A10DBCFE1FE0C11100D20698 /* PayChooseViewController.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1152,6 +1150,9 @@
 				A1DEB2341FC2B4CC00F45256 /* OrderListTableViewCell.h */,
 				A1DEB2351FC2B4CC00F45256 /* OrderListTableViewCell.m */,
 				A1DEB2361FC2B4CC00F45256 /* OrderListTableViewCell.xib */,
+				A10DBCF11FE0BF2900D20698 /* QuickBookingViewCell.h */,
+				A10DBCEF1FE0BF2800D20698 /* QuickBookingViewCell.m */,
+				A10DBCF01FE0BF2900D20698 /* QuickBookingViewCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1213,7 +1214,6 @@
 		A1DEB2461FC2B4CC00F45256 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				A1DEB2471FC2B4CC00F45256 /* cheZhiLian 2017-11-07 17-59-22 */,
 				A1DEB24C1FC2B4CC00F45256 /* MyCenterVC.h */,
 				A1DEB24D1FC2B4CC00F45256 /* MyCenterVC.m */,
 				A1DEB24E1FC2B4CC00F45256 /* MyViewController.h */,
@@ -1227,17 +1227,6 @@
 				A1DEB2561FC2B4CC00F45256 /* XBWebViewController.xib */,
 			);
 			path = C;
-			sourceTree = "<group>";
-		};
-		A1DEB2471FC2B4CC00F45256 /* cheZhiLian 2017-11-07 17-59-22 */ = {
-			isa = PBXGroup;
-			children = (
-				A1DEB2481FC2B4CC00F45256 /* cheZhiLian.ipa */,
-				A1DEB2491FC2B4CC00F45256 /* DistributionSummary.plist */,
-				A1DEB24A1FC2B4CC00F45256 /* ExportOptions.plist */,
-				A1DEB24B1FC2B4CC00F45256 /* Packaging.log */,
-			);
-			path = "cheZhiLian 2017-11-07 17-59-22";
 			sourceTree = "<group>";
 		};
 		A1DEB2571FC2B4CC00F45256 /* ForgotPassword */ = {
@@ -1258,7 +1247,6 @@
 				A1DEB2701FC2B4CC00F45256 /* LogInbj.png */,
 				A1DEB2711FC2B4CD00F45256 /* LogInViewController.h */,
 				A1DEB2721FC2B4CD00F45256 /* LogInViewController.m */,
-				A1DEB2731FC2B4CD00F45256 /* Main */,
 				A1DEB2741FC2B4CD00F45256 /* TakeBackKBView.h */,
 				A1DEB2751FC2B4CD00F45256 /* TakeBackKBView.m */,
 			);
@@ -1288,13 +1276,6 @@
 				A1DEB26D1FC2B4CC00F45256 /* RegistViewController.xib */,
 			);
 			path = from;
-			sourceTree = "<group>";
-		};
-		A1DEB2731FC2B4CD00F45256 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		A1DEB2761FC2B4CD00F45256 /* M */ = {
@@ -1336,6 +1317,7 @@
 		A1DEB2881FC2B4CE00F45256 /* Encapsulation */ = {
 			isa = PBXGroup;
 			children = (
+				A10DBCF41FE0C07C00D20698 /* CLCycleView */,
 				A1DEB2891FC2B4CE00F45256 /* AES */,
 				A1DEB2921FC2B4CE00F45256 /* AlipaySDK */,
 				A1DEB2951FC2B4CE00F45256 /* CPTextViewPlaceholder */,
@@ -1345,7 +1327,6 @@
 				A1DEB2AF1FC2B4CE00F45256 /* DSButton.m */,
 				A1DEB2B01FC2B4CE00F45256 /* FYLPageVC */,
 				A1DEB2B51FC2B4CE00F45256 /* JKCountDownButton */,
-				A1DEB2B81FC2B4CE00F45256 /* LeftRightSlider */,
 				A1DEB2B91FC2B4CE00F45256 /* RefreshAndMore */,
 				A1DEB2C41FC2B4CE00F45256 /* SwipeView */,
 				A1DEB2C71FC2B4CE00F45256 /* TabBarView.h */,
@@ -1446,13 +1427,6 @@
 				A1DEB2B71FC2B4CE00F45256 /* JKCountDownButton.m */,
 			);
 			path = JKCountDownButton;
-			sourceTree = "<group>";
-		};
-		A1DEB2B81FC2B4CE00F45256 /* LeftRightSlider */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LeftRightSlider;
 			sourceTree = "<group>";
 		};
 		A1DEB2B91FC2B4CE00F45256 /* RefreshAndMore */ = {
@@ -1800,37 +1774,6 @@
 			path = CoachDetailsCell;
 			sourceTree = "<group>";
 		};
-		A1DEB3521FC2B4D400F45256 /* learning */ = {
-			isa = PBXGroup;
-			children = (
-				A1DEB3531FC2B4D400F45256 /* C */,
-				A1DEB3541FC2B4D400F45256 /* M */,
-				A1DEB3551FC2B4D400F45256 /* V */,
-			);
-			path = learning;
-			sourceTree = "<group>";
-		};
-		A1DEB3531FC2B4D400F45256 /* C */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		A1DEB3541FC2B4D400F45256 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		A1DEB3551FC2B4D400F45256 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
 		A1DEB3571FC2B4D500F45256 /* homePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1853,7 +1796,6 @@
 			isa = PBXGroup;
 			children = (
 				A1DEB35A1FC2B4D500F45256 /* C */,
-				A1DEB35D1FC2B4D500F45256 /* M */,
 				A1DEB35E1FC2B4D500F45256 /* V */,
 			);
 			path = ConfirmOrder;
@@ -1866,13 +1808,6 @@
 				A1DEB35C1FC2B4D500F45256 /* ConfirmOrderVC.m */,
 			);
 			path = C;
-			sourceTree = "<group>";
-		};
-		A1DEB35D1FC2B4D500F45256 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
 			sourceTree = "<group>";
 		};
 		A1DEB35E1FC2B4D500F45256 /* V */ = {
@@ -1989,17 +1924,9 @@
 		A1DEB4831FC2B8AF00F45256 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				A1DEB4841FC2B8AF00F45256 /* LeftRightSlider */,
 				A1DEB4851FC2B8AF00F45256 /* SDAutoLayout */,
 			);
 			path = thirdParty;
-			sourceTree = "<group>";
-		};
-		A1DEB4841FC2B8AF00F45256 /* LeftRightSlider */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LeftRightSlider;
 			sourceTree = "<group>";
 		};
 		A1DEB4851FC2B8AF00F45256 /* SDAutoLayout */ = {
@@ -2133,10 +2060,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1DEB3E31FC2B4D600F45256 /* Packaging.log in Resources */,
 				A1DEB4571FC2B4D600F45256 /* CoachDetailViewController.xib in Resources */,
 				A1DEB4031FC2B4D600F45256 /* ServiceDisplayTVCell.xib in Resources */,
-				A1DEB3E21FC2B4D600F45256 /* ExportOptions.plist in Resources */,
 				A1DEB44C1FC2B4D600F45256 /* AppointCoachViewController.xib in Resources */,
 				A1541E4B1FC2AF8200D84AC6 /* LaunchScreen.storyboard in Resources */,
 				A1DEB3BB1FC2B4D600F45256 /* AboutViewController.xib in Resources */,
@@ -2153,7 +2078,6 @@
 				A1DEB4101FC2B4D600F45256 /* Localizable.strings in Resources */,
 				A1DEB4821FC2B4D600F45256 /* test2.png in Resources */,
 				A1DEB3D91FC2B4D600F45256 /* OrderListTableViewCell.xib in Resources */,
-				A1DEB3E01FC2B4D600F45256 /* cheZhiLian.ipa in Resources */,
 				A1DEB3ED1FC2B4D600F45256 /* BindingViewController.xib in Resources */,
 				A1DEB3DB1FC2B4D600F45256 /* CouponListViewController.xib in Resources */,
 				A1DEB4361FC2B4D600F45256 /* 7.png in Resources */,
@@ -2173,6 +2097,7 @@
 				A1DEB4641FC2B4D600F45256 /* SelectCouponTableViewCell.xib in Resources */,
 				A1DEB3C11FC2B4D600F45256 /* SettingBindingViewController.xib in Resources */,
 				A1DEB3C91FC2B4D600F45256 /* UserBaseInfoViewController.xib in Resources */,
+				A10DBD041FE0C11300D20698 /* MethodPaymentView.xib in Resources */,
 				A1DEB40F1FC2B4D600F45256 /* CZPhotoPreviewViewController.xib in Resources */,
 				A1DEB3F91FC2B4D600F45256 /* LogInbj.png in Resources */,
 				A1DEB3A91FC2B4D600F45256 /* PayViewController.xib in Resources */,
@@ -2188,6 +2113,7 @@
 				A1DEB3991FC2B4D600F45256 /* ComplaintTableViewCell.xib in Resources */,
 				A1DEB4521FC2B4D600F45256 /* SureOrderTableViewCell.xib in Resources */,
 				A1DEB3D11FC2B4D600F45256 /* MyOrderEvaluationViewController.xib in Resources */,
+				A10DBD021FE0C11300D20698 /* PayChooseViewController.xib in Resources */,
 				A1DEB4491FC2B4D600F45256 /* SideBarViewController.xib in Resources */,
 				A1DEB3D31FC2B4D600F45256 /* MyOrderViewController.xib in Resources */,
 				A1DEB3B71FC2B4D600F45256 /* EnrollDetailsVC.xib in Resources */,
@@ -2201,6 +2127,7 @@
 				A1DEB3B11FC2B4D600F45256 /* AccountTableViewCell.xib in Resources */,
 				A1DEB3931FC2B4D600F45256 /* ComplaintViewController.xib in Resources */,
 				A1DEB3A11FC2B4D600F45256 /* AccountListViewController.xib in Resources */,
+				A10DBCF31FE0BF2900D20698 /* QuickBookingViewCell.xib in Resources */,
 				A1DEB3A71FC2B4D600F45256 /* CoinListViewController.xib in Resources */,
 				A1DEB3C31FC2B4D600F45256 /* SettingViewController.xib in Resources */,
 				A1DEB44E1FC2B4D600F45256 /* SureOrderViewController.xib in Resources */,
@@ -2229,7 +2156,6 @@
 				A1DEB4761FC2B4D600F45256 /* GoodsIntroductionTVCell.xib in Resources */,
 				A1DEB4231FC2B4D600F45256 /* backgroundStar.png in Resources */,
 				A1DEB3F51FC2B4D600F45256 /* RegistVercodeViewController.xib in Resources */,
-				A1DEB3E11FC2B4D600F45256 /* DistributionSummary.plist in Resources */,
 				A1DEB4241FC2B4D600F45256 /* backgroundStar@2x.png in Resources */,
 				A1DEB3AD1FC2B4D600F45256 /* UseRuleViewController.xib in Resources */,
 				A1541E431FC2AF8200D84AC6 /* Main.storyboard in Resources */,
@@ -2312,12 +2238,16 @@
 				A1DEB42B1FC2B4D600F45256 /* UIViewController+XYSideCategory.m in Sources */,
 				A1DEB3C01FC2B4D600F45256 /* SettingBindingViewController.m in Sources */,
 				A1DEB3D81FC2B4D600F45256 /* OrderListTableViewCell.m in Sources */,
+				A10DBCF21FE0BF2900D20698 /* QuickBookingViewCell.m in Sources */,
+				A10DBCF91FE0C07C00D20698 /* CLCycleView.m in Sources */,
 				A1DEB3B81FC2B4D600F45256 /* GoodsOrderDetailsModel+CoreDataClass.m in Sources */,
 				A1DEB4611FC2B4D600F45256 /* CommentTableViewCell.m in Sources */,
 				A1DEB3C41FC2B4D600F45256 /* ImproveInfoViewController.m in Sources */,
 				A1DEB39E1FC2B4D600F45256 /* MessageTableViewCell.m in Sources */,
 				A1DEB46B1FC2B4D600F45256 /* CouponChooseTVCell.m in Sources */,
 				A1DEB3D71FC2B4D600F45256 /* StudentDriverOrderModel+CoreDataProperties.m in Sources */,
+				A10DBD031FE0C11300D20698 /* PayChooseViewController.m in Sources */,
+				A10DBD011FE0C11300D20698 /* MethodPaymentView.m in Sources */,
 				A1DEB3A41FC2B4D600F45256 /* AccountViewController.m in Sources */,
 				A1DEB3D61FC2B4D600F45256 /* StudentDriverOrderModel+CoreDataClass.m in Sources */,
 				A1DEB3FB1FC2B4D600F45256 /* TakeBackKBView.m in Sources */,
@@ -2447,6 +2377,7 @@
 				A1DEB41F1FC2B4D600F45256 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				A1DEB47E1FC2B4D600F45256 /* CourseListModel+CoreDataProperties.m in Sources */,
 				A1DEB4161FC2B4D600F45256 /* JKCountDownButton.m in Sources */,
+				A10DBCFA1FE0C07C00D20698 /* CLPageControl.m in Sources */,
 				A1DEB3FE1FC2B4D600F45256 /* RegisteredViewController.m in Sources */,
 				A1DEB4441FC2B4D600F45256 /* BaseViewController.m in Sources */,
 				A1DEB43D1FC2B4D600F45256 /* CommonUtil+Date.m in Sources */,

@@ -95,7 +95,7 @@
     self.btnReset.layer.borderWidth = 1;
     //    self.subjectNoneButton.layer.cornerRadius = 3;
     
-    // 驾校选择
+    // 马场选择
     self.showSchoolView.layer.cornerRadius = 3;
     self.showSchoolView.layer.borderWidth = 0.7;
     self.showSchoolView.layer.borderColor = MColor(211, 212, 215).CGColor;
@@ -112,7 +112,7 @@
     tapGestureRecognizer2.numberOfTapsRequired = 1;
     [self.selectView addGestureRecognizer:tapGestureRecognizer2];
     
-    // 监听驾校搜索输入框
+    // 监听马场搜索输入框
     [self.schoolNameInputField addTarget:self action:@selector(inputSchoolNameChanged:) forControlEvents:UIControlEventEditingChanged];
 }
 
@@ -142,21 +142,21 @@
             self.dateBeginLabel.text = @"不限";
         }
         
-        // 驾校
+        // 马场
         NSString *schoolName = self.searchDic[@"driveschoolname"];
         if ([CommonUtil isEmpty:schoolName]) {
-            self.schoolLabel.text = @"不限驾校";
+            self.schoolLabel.text = @"不限马场";
         } else {
           
-            self.schoolLabel.text = @"测试驾校";
+            self.schoolLabel.text = @"测试马场";
         }
         
     }else{
         self.dateBeginLabel.text = @"不限";
-        self.schoolLabel.text = @"不限驾校";
+        self.schoolLabel.text = @"不限马场";
     }
     
-    //显示绑定驾校
+    //显示绑定马场
     NSDictionary * userInfo = [[NSDictionary alloc]init];
     userInfo = [CommonUtil getObjectFromUD:@"UserInfo"];
     NSString *drive_school = [userInfo objectForKey:@"drive_school"];
@@ -171,9 +171,9 @@
 {
     self.dateBeginLabel.text = @"不限";
     self.subjectID = @"0";
-    self.schoolLabel.text = @"不限驾校";
+    self.schoolLabel.text = @"不限马场";
     
-    //显示绑定驾校
+    //显示绑定马场
     NSDictionary * userInfo = [[NSDictionary alloc]init];
     userInfo = [CommonUtil getObjectFromUD:@"UserInfo"];
     NSString *drive_school = [userInfo objectForKey:@"drive_school"];
@@ -275,7 +275,7 @@
     return YES;
 }
 
-// 显示输入名字匹配的驾校
+// 显示输入名字匹配的马场
 - (void)inputSchoolNameChanged:(UITextField *)textField {
     [self.matchedSchoolArray removeAllObjects];
    
@@ -283,13 +283,13 @@
 }
 
 #pragma mark - 接口请求
-// 获取所有科目类型
+// 获取所有课程类型
 - (void)getAllSubject
 {
     
 }
 
-// 获取驾校列表
+// 获取马场列表
 - (void)postGetSchollList
 {
     
@@ -409,7 +409,7 @@
         return dateLabel;
     }
     
-    // 驾校选择器
+    // 马场选择器
     else if ([pickerView isEqual:self.schoolPicker]) {
         UILabel *schoolLabel = (UILabel *)view;
         if (!schoolLabel) {
@@ -616,7 +616,7 @@
 
 - (IBAction)chooseSchoolClick:(id)sender {
     
-    //显示绑定驾校
+    //显示绑定马场
     NSDictionary * userInfo = [[NSDictionary alloc]init];
     userInfo = [CommonUtil getObjectFromUD:@"UserInfo"];
     NSString *drive_school = [userInfo objectForKey:@"drive_school"];
@@ -633,7 +633,7 @@
     }
 }
 
-// 完成驾校选择
+// 完成马场选择
 - (IBAction)selectDoneClick:(id)sender {
     NSInteger index = [self.schoolPicker selectedRowInComponent:0];
     [self.selectView removeFromSuperview];

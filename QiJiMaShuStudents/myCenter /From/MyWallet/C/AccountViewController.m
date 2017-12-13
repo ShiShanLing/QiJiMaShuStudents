@@ -12,7 +12,7 @@
 #import "AppDelegate.h"
 #import "AccountManagerViewController.h"
 #import "LoginViewController.h"
-
+#import "StudentsCenterVC.h"
 @interface AccountViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *currentMoneyLabel;  // 当前金额
@@ -53,10 +53,18 @@
 }
 
 - (IBAction)handleReturn:(id)sender {
-    if ([self.type isEqualToString:@"1"]) {
-              [self.navigationController popViewControllerAnimated:YES];
-    }else {
+    
+    if ([self.type isEqualToString:@"6"]) {
+        [self.navigationController popViewControllerAnimated:YES];
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+
+    }else {
+        
+        if ([self.type isEqualToString:@"1"]) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }else {
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        }
     }
 }
 -(void)viewWillAppear:(BOOL)animated {
@@ -111,7 +119,7 @@
         [VC showAlert:@"网络超时请重试" time:1.2];
         NSLog(@"error%@", error);
     }];
-
+    
 }
 - (void)parsingData:(NSDictionary *)dataDic {
     [self.dataArray removeAllObjects];
@@ -141,12 +149,12 @@
 }
 // 提现
 - (IBAction)getCashClick:(id)sender {
-//    NSDictionary *user_info = [CommonUtil getObjectFromUD:@"UserInfo"];
-//    NSString *aliaccount = user_info[@"alipay_account"];
-//    if([CommonUtil isEmpty:aliaccount]){
-//        [self makeToast:@"您还未设置支付宝账户,请先去账户管理页面设置您的支付宝账户"];
-//        return;
-//    }
+    //    NSDictionary *user_info = [CommonUtil getObjectFromUD:@"UserInfo"];
+    //    NSString *aliaccount = user_info[@"alipay_account"];
+    //    if([CommonUtil isEmpty:aliaccount]){
+    //        [self makeToast:@"您还未设置支付宝账户,请先去账户管理页面设置您的支付宝账户"];
+    //        return;
+    //    }
     TypeinNumberViewController *viewController = [[TypeinNumberViewController alloc] initWithNibName:@"TypeinNumberViewController" bundle:nil];
     viewController.status = @"2";
     viewController.balance = self.balance;

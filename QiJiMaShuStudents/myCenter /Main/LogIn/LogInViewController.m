@@ -29,8 +29,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super.navigationController setNavigationBarHidden:YES];
     _NameIBV.NameTF.delegate = self;
-    
 }
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     _NameIBV.NameTF.delegate = nil;

@@ -5,7 +5,6 @@
 //  Created by Dino on 15/4/24.
 //  Copyright (c) 2015年 daoshun. All rights reserved.
 //
-
 #import "CoachDetailViewController.h"
 #import "TQStarRatingView.h"
 #import "CommentTableViewCell.h"
@@ -20,7 +19,6 @@
     int _curPage;
     int _searchPage;
 }
-
 @property (strong, nonatomic) DSPullToRefreshManager *pullToRefresh;    // 下拉刷新
 @property (strong, nonatomic) DSBottomPullToMoreManager *pullToMore;    // 上拉加载
 /**
@@ -106,16 +104,12 @@
     [super viewWillAppear:animated];
     [self setHidesBottomBarWhenPushed:NO];
     [self requestGetAD];
-    
-    if ([UserDataSingleton mainSingleton].subState.length == 0||[[UserDataSingleton mainSingleton].subState isEqualToString:@"0"] || [[UserDataSingleton mainSingleton].subState isEqualToString:@"3"]||[[UserDataSingleton mainSingleton].subState isEqualToString:@"4"] ||[UserDataSingleton mainSingleton].coachId.length == 0) {
-        if ([[UserDataSingleton mainSingleton].subState isEqualToString:@"4"]||[[UserDataSingleton mainSingleton].subState isEqualToString:@"3"]) {
-            self.noCoachView.titleLabel.text =  @"您的科二科三已通过,不用再进行骑马预约!";
-        }
-        self.noCoachView.hidden = NO;
-    }else {
-        
+if([UserDataSingleton mainSingleton].coachId.length == 0){
+	self.noCoachView.hidden = NO;
+}else{
+	self.noCoachView.hidden = YES;
+}
       self.noCoachView.hidden = YES;
-    }
     self.navigationController.navigationBarHidden =YES;
     
 }

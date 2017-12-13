@@ -18,7 +18,6 @@
                 <outlet property="currencyLabel" destination="Gsn-jF-QSa" id="tv0-q5-XMS"/>
                 <outlet property="messagesLabel" destination="PwU-C4-z2N" id="p39-Rv-jni"/>
                 <outlet property="messagesNumView" destination="W7E-4U-0kx" id="HhN-2O-BF1"/>
-                <outlet property="studentDriverStateLabel" destination="m9c-vC-KQa" id="Ltw-l9-jDD"/>
                 <outlet property="userNameLabel" destination="UQx-pK-654" id="fhI-wK-one"/>
                 <outlet property="userPhoneLabel" destination="jKR-Y8-94j" id="mrX-UO-fK9"/>
                 <outlet property="view" destination="Opr-r6-7x7" id="LR5-ht-bmf"/>
@@ -538,25 +537,16 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1E-vl-fMY" userLabel="tools">
                             <rect key="frame" x="0.0" y="74" width="375" height="245"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-cV-j5f" userLabel="骑马订单">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-cV-j5f" userLabel="骑马订单1">
                                     <rect key="frame" x="0.0" y="0.0" width="187" height="117"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="骑马订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWH-oB-S8A">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="报名订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWH-oB-S8A" userLabel="报名订单">
                                             <rect key="frame" x="0.0" y="66" width="187.5" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="18" id="IJ1-vk-8RM"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="骑马预约记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-vC-KQa">
-                                            <rect key="frame" x="0.0" y="92" width="187.5" height="12"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="12" id="SpB-50-flH"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.63921568630000003" green="0.6705882353" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-ov-SXW" userLabel="骑马订单">
@@ -580,12 +570,9 @@
                                     <constraints>
                                         <constraint firstItem="KWH-oB-S8A" firstAttribute="leading" secondItem="ufi-cV-j5f" secondAttribute="leading" id="4qC-rF-Jgh"/>
                                         <constraint firstItem="uup-8R-O7R" firstAttribute="top" secondItem="ufi-cV-j5f" secondAttribute="top" constant="19" id="5VI-oh-vN0"/>
-                                        <constraint firstItem="m9c-vC-KQa" firstAttribute="top" secondItem="KWH-oB-S8A" secondAttribute="bottom" constant="8" id="FvR-AD-Eja"/>
                                         <constraint firstAttribute="bottom" secondItem="Bvc-ov-SXW" secondAttribute="bottom" id="GXg-rg-OFk"/>
-                                        <constraint firstItem="m9c-vC-KQa" firstAttribute="leading" secondItem="ufi-cV-j5f" secondAttribute="leading" id="O4w-ey-4gV"/>
                                         <constraint firstAttribute="trailing" secondItem="Bvc-ov-SXW" secondAttribute="trailing" constant="2" id="RWz-os-fqv"/>
                                         <constraint firstItem="Bvc-ov-SXW" firstAttribute="top" secondItem="ufi-cV-j5f" secondAttribute="top" id="TXs-x8-aXC"/>
-                                        <constraint firstAttribute="trailing" secondItem="m9c-vC-KQa" secondAttribute="trailing" id="Wk7-KY-zfc"/>
                                         <constraint firstAttribute="height" constant="117" id="bAp-8P-JJ9"/>
                                         <constraint firstItem="uup-8R-O7R" firstAttribute="centerX" secondItem="ufi-cV-j5f" secondAttribute="centerX" id="iHg-gV-icm"/>
                                         <constraint firstAttribute="trailing" secondItem="KWH-oB-S8A" secondAttribute="trailing" id="kU3-QL-gjr"/>
@@ -593,10 +580,10 @@
                                         <constraint firstItem="KWH-oB-S8A" firstAttribute="top" secondItem="uup-8R-O7R" secondAttribute="bottom" constant="15" id="sWy-mW-e9c"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cen-9V-Ceq" userLabel="报名订单">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cen-9V-Ceq" userLabel="骑马订单">
                                     <rect key="frame" x="188" y="0.0" width="187" height="117"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="报名订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-qo-4QT">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马术学习订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-qo-4QT" userLabel="马术学习订单">
                                             <rect key="frame" x="0.0" y="66" width="187" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="18" id="Ze0-Y0-ysh"/>
@@ -615,35 +602,6 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看的我的报名订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBA-ZB-nTG">
-                                            <rect key="frame" x="0.0" y="92" width="187" height="12"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="12" id="dX0-HU-Nia"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.63921568630000003" green="0.6705882353" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="dX0-HU-Nia"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular">
-                                                <mask key="constraints">
-                                                    <include reference="dX0-HU-Nia"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnc-My-K8E" userLabel="分享有奖">
-                                            <rect key="frame" x="3" y="0.0" width="180" height="118"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal">
-                                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="handleSignUpOrder:" destination="-1" eventType="touchUpInside" id="b23-Hu-iHf"/>
-                                            </connections>
-                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignUpOrder" translatesAutoresizingMaskIntoConstraints="NO" id="j9w-lV-r5z">
                                             <rect key="frame" x="77.5" y="20" width="32" height="32"/>
                                             <constraints>
@@ -663,46 +621,44 @@
                                                 </mask>
                                             </variation>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnc-My-K8E" userLabel="分享有奖">
+                                            <rect key="frame" x="3" y="-1" width="180" height="118"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="handleSignUpOrder:" destination="-1" eventType="touchUpInside" id="b23-Hu-iHf"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="qqw-qo-4QT" firstAttribute="top" secondItem="j9w-lV-r5z" secondAttribute="bottom" constant="14" id="5dw-UY-qzI"/>
-                                        <constraint firstItem="SBA-ZB-nTG" firstAttribute="top" secondItem="qqw-qo-4QT" secondAttribute="bottom" constant="8" id="6QI-QP-tMh"/>
                                         <constraint firstItem="j9w-lV-r5z" firstAttribute="centerX" secondItem="Cen-9V-Ceq" secondAttribute="centerX" id="8bU-pH-oo1"/>
                                         <constraint firstAttribute="trailing" secondItem="qqw-qo-4QT" secondAttribute="trailing" id="IrS-VP-TP9"/>
                                         <constraint firstItem="qqw-qo-4QT" firstAttribute="leading" secondItem="Cen-9V-Ceq" secondAttribute="leading" id="N8C-LO-pgs"/>
                                         <constraint firstAttribute="height" constant="117" id="YFT-o5-mZZ"/>
-                                        <constraint firstItem="SBA-ZB-nTG" firstAttribute="leading" secondItem="Cen-9V-Ceq" secondAttribute="leading" id="bEP-I0-0Oz"/>
                                         <constraint firstItem="j9w-lV-r5z" firstAttribute="top" secondItem="Cen-9V-Ceq" secondAttribute="top" constant="20" id="ftJ-oi-tSx"/>
-                                        <constraint firstAttribute="trailing" secondItem="SBA-ZB-nTG" secondAttribute="trailing" id="yst-bt-dEF"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Jg-65-aQu" userLabel="预约考试">
                                     <rect key="frame" x="0.0" y="118" width="187.5" height="117"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reservation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wa-QJ-cVB">
-                                            <rect key="frame" x="78" y="15" width="32" height="32"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_客服" translatesAutoresizingMaskIntoConstraints="NO" id="3Wa-QJ-cVB">
+                                            <rect key="frame" x="78" y="25" width="32" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="32" id="9XE-8C-o6W"/>
                                                 <constraint firstAttribute="height" constant="32" id="Gro-mJ-cJD"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约考试" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ure-V9-6CU">
-                                            <rect key="frame" x="0.0" y="60" width="187.5" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会员服务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ure-V9-6CU" userLabel="会员服务">
+                                            <rect key="frame" x="0.0" y="70" width="187.5" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="18" id="YtO-Xy-Fya"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通过驾校预约科目考试" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCe-r2-RCC">
-                                            <rect key="frame" x="0.0" y="86" width="187.5" height="12"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="12" id="ykd-OR-yhp"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.63921568630000003" green="0.6705882353" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyr-jC-adq" userLabel="tousu">
@@ -722,18 +678,15 @@
                                         <constraint firstItem="ure-V9-6CU" firstAttribute="top" secondItem="3Wa-QJ-cVB" secondAttribute="bottom" constant="13" id="9Rc-jg-EKk"/>
                                         <constraint firstItem="lyr-jC-adq" firstAttribute="top" secondItem="3Jg-65-aQu" secondAttribute="top" constant="8" id="EWq-DA-PFo"/>
                                         <constraint firstItem="ure-V9-6CU" firstAttribute="leading" secondItem="3Jg-65-aQu" secondAttribute="leading" id="Gx3-rE-J2t"/>
-                                        <constraint firstItem="SCe-r2-RCC" firstAttribute="leading" secondItem="3Jg-65-aQu" secondAttribute="leading" id="VOs-Lt-Big"/>
-                                        <constraint firstItem="SCe-r2-RCC" firstAttribute="top" secondItem="ure-V9-6CU" secondAttribute="bottom" constant="8" id="Xly-MP-xER"/>
-                                        <constraint firstItem="3Wa-QJ-cVB" firstAttribute="top" secondItem="3Jg-65-aQu" secondAttribute="top" constant="15" id="YyQ-7o-krd"/>
+                                        <constraint firstItem="3Wa-QJ-cVB" firstAttribute="top" secondItem="3Jg-65-aQu" secondAttribute="top" constant="25" id="YyQ-7o-krd"/>
                                         <constraint firstItem="lyr-jC-adq" firstAttribute="leading" secondItem="3Jg-65-aQu" secondAttribute="leading" constant="8" id="oi7-MC-Bk2"/>
                                         <constraint firstAttribute="bottom" secondItem="lyr-jC-adq" secondAttribute="bottom" id="pHf-Zm-aMN"/>
                                         <constraint firstAttribute="height" constant="117" id="w0s-iW-k5T"/>
-                                        <constraint firstAttribute="trailing" secondItem="SCe-r2-RCC" secondAttribute="trailing" id="wcZ-Vs-iEi"/>
                                         <constraint firstAttribute="trailing" secondItem="lyr-jC-adq" secondAttribute="trailing" constant="7.5" id="zyC-Ho-LvF"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-C3-Cez" userLabel="邀请">
-                                    <rect key="frame" x="188" y="125" width="187" height="112"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-C3-Cez" userLabel="邀请">
+                                    <rect key="frame" x="188" y="120" width="187" height="117"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szP-bq-tBG">
                                             <rect key="frame" x="0.0" y="60" width="187" height="18"/>
@@ -1225,9 +1178,9 @@
         </view>
     </objects>
     <resources>
-        <image name="Reservation" width="16" height="16"/>
         <image name="SignUpOrder" width="16" height="16"/>
         <image name="ic_go" width="7" height="13"/>
+        <image name="ico_客服" width="60" height="60"/>
         <image name="icon-notice" width="22" height="22"/>
         <image name="icon_portrait_default" width="82" height="82"/>
         <image name="icon_setting1" width="19" height="18"/>

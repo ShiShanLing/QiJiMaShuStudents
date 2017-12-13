@@ -70,12 +70,10 @@
     payView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:payView];
     payView.sd_layout.leftSpaceToView(self.view, 0).rightSpaceToView(self.view, 0).bottomSpaceToView(self.view, 0).heightIs(77);
-    
-    
     UIButton *payBtn = [UIButton buttonWithType:(UIButtonTypeSystem)];
     [payBtn setTitle:@"确认报名" forState:(UIControlStateNormal)];
     [payBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-    payBtn.backgroundColor = MColor(255, 74, 0);
+    payBtn.backgroundColor = MColor(24, 42, 97);
     payBtn.layer.cornerRadius = 5;
     payBtn.layer.masksToBounds = YES;
     [payBtn addTarget:self action:@selector(handlePayBtn) forControlEvents:(UIControlEventTouchUpInside)];
@@ -102,7 +100,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error%@", error);
     }];
-    
     
 }
 /**
@@ -159,7 +156,7 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -171,11 +168,6 @@
         GoodsIntroductionTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GoodsIntroductionTVCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.model = self.goodsDetailsArray[indexPath.section];
-        return cell;
-    }else if (indexPath.section == 1) {
-    
-        GoodsPromisedTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GoodsPromisedTVCell" forIndexPath:indexPath];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else {
         FeeItemizationsTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeeItemizationsTVCell" forIndexPath:indexPath];
@@ -190,35 +182,43 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 148;
-    }else if (indexPath.section == 1){
-        return 407;
+        return 104;
     }else {
-    
-        return 495;
+        return 444;
     }
 }
-
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.01;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-
     if (section == 0) {
         return 0.01;
     }else {
-        return 10;
+        return 0.01;
     }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = MColor(234, 234, 234);
+    if (section == 0) {
+        view.frame = CGRectMake(0, 0, 0, 0.01);
+    }else {
+        view.frame = CGRectMake(0, 0, 0, 0.01);
+    }
+    return view;
+    
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] init];
     view.backgroundColor = MColor(234, 234, 234);
     if (section == 0) {
-        view.frame = CGRectMake(0, 0, 0, 0);
+        view.frame = CGRectMake(0, 0, 0, 0.01);
     }else {
     
-        view.frame = CGRectMake(0, 0, kScreen_widht, 10);
+        view.frame = CGRectMake(0, 0, 0, 0.01);
     }
     return view;
 }

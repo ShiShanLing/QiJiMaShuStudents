@@ -53,7 +53,7 @@
 - (IBAction)handleReturn:(id)sender {
     
     NSLog(@"self.typ%@", self.type);
-    if ([self.type isEqualToString:@"2"] || [self.type isEqualToString:@"1"]) {
+    if ([self.type isEqualToString:@"2"] || [self.type isEqualToString:@"1"]|| [self.type isEqualToString:@"3"]) {
         
          [self.navigationController popViewControllerAnimated:YES];
     }else {
@@ -155,18 +155,24 @@
         cell.couponStateLabel.text = @"已使用";
     }
     //如果type是1 那么代表上个界面还需要看满减券 那么就把学时券黑掉
+    NSLog(@"cellForRowAtIndexPath%@", self.type);
     if ([self.type isEqualToString:@"1"]) {
+        
         if ([model.couponClassId isEqualToString:@"1"]) {
             cell.backgroundVIew.backgroundColor = MColor(200, 200, 200);
         }
     }else if ([self.type isEqualToString:@"2"]){
+        
         NSLog(@"self.payAmount%f", self.payAmount);
         if (model.couponPrice > self.payAmount || model.couponLimit > self.payAmount || self.courseNum < model.couponDuration) {
             cell.backgroundVIew.backgroundColor = MColor(200, 200, 200);
-        }else {
-            
-            
         }
+    }else if ([self.type isEqualToString:@"3"]){
+        
+        if ([model.couponClassId isEqualToString:@"0"]||model.couponIsUsed) {
+            cell.backgroundVIew.backgroundColor = MColor(200, 200, 200);
+        }
+        
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     tableView.separatorStyle = UITableViewCellSelectionStyleNone;
@@ -188,11 +194,11 @@
             if (model.couponPrice > self.payAmount || model.couponLimit > self.payAmount || self.courseNum > model.couponDuration) {
                 
             }else {
-                self.obtainCoupons(model.couponMemberId, model.couponPrice, model.couponClassId);
+                self.obtainCoupons(model.couponMemberId, model.couponPrice, model.couponClassId,model.couponTitle);
                 [self.navigationController popViewControllerAnimated:YES];
             }
         }
-    }else {
+    }else  if ([self.type isEqualToString:@"2"]){
         //如果是满减券
         if ([model.couponClassId isEqualToString:@"0"]) {
             
@@ -200,45 +206,57 @@
                 
             }else {
                 NSLog(@"model.couponClassId%@", model.couponClassId);
-                self.obtainCoupons(model.couponMemberId, model.couponPrice, model.couponClassId);
+                self.obtainCoupons(model.couponMemberId, model.couponPrice, model.couponClassId,model.couponTitle);
                 [self.navigationController popViewControllerAnimated:YES];
             }
         }else {//否者就是学时券
             if (self.courseNum < model.couponDuration) {
                 
             }else {
-                self.obtainCoupons(model.couponMemberId, model.couponDuration, model.couponClassId);
+                self.obtainCoupons(model.couponMemberId, model.couponDuration, model.couponClassId,model.couponTitle);
                 [self.navigationController popViewControllerAnimated:YES];
             }
         }
+    }else if ([self.type isEqualToString:@"3"]){
+        
+        
+        if ([model.couponClassId isEqualToString:@"0"]||model.couponIsUsed) {
+            
+        }else {
+            
+            self.obtainCoupons(model.couponMemberId, model.couponDuration, model.couponClassId,model.couponTitle);
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }
+        
     }
 }
-
-- (void)GetCoupon:(NSString *)couponId amount:(NSInteger)amount type:(NSString *)type{
-    NSString *URL_Str = [NSString stringWithFormat:@"%@/student/api/getCouponMember", kURL_SHY];
-    NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
-    URL_Dic[@"couponId"] = couponId;
-    URL_Dic[@"memberId"] = [UserDataSingleton mainSingleton].studentsId;
-    __weak  CouponListViewController *VC = self;
-    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-    [session POST:URL_Str parameters:URL_Dic progress:^(NSProgress * _Nonnull uploadProgress) {
-        NSLog(@"uploadProgress%@", uploadProgress);
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"responseObject%@", responseObject);
-        NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
-        if ([resultStr isEqualToString:@"1"]) {
-            NSArray *couponArray = responseObject[@"data"];
-            NSDictionary *couponDic = couponArray[0];
-            NSString *couponMemberId = couponDic[@"couponMemberId"];
-            self.obtainCoupons(couponMemberId, amount,type);
-            [self.navigationController popViewControllerAnimated:YES];
-        }else {
-            [VC showAlert:responseObject[@"msg"] time:1.2];
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"error%@", error);
-    }];
-}
+//
+//- (void)GetCoupon:(NSString *)couponId amount:(NSInteger)amount type:(NSString *)type{
+//
+//    NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
+//    URL_Dic[@"couponId"] = couponId;
+//    URL_Dic[@"memberId"] = [UserDataSingleton mainSingleton].studentsId;
+//    __weak  CouponListViewController *VC = self;
+//    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+//    [session POST:URL_Str parameters:URL_Dic progress:^(NSProgress * _Nonnull uploadProgress) {
+//        NSLog(@"uploadProgress%@", uploadProgress);
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSLog(@"responseObject%@", responseObject);
+//        NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
+//        if ([resultStr isEqualToString:@"1"]) {
+//            NSArray *couponArray = responseObject[@"data"];
+//            NSDictionary *couponDic = couponArray[0];
+//            NSString *couponMemberId = couponDic[@"couponMemberId"];
+//            self.obtainCoupons(couponMemberId, amount,type,@"");
+//            [self.navigationController popViewControllerAnimated:YES];
+//        }else {
+//            [VC showAlert:responseObject[@"msg"] time:1.2];
+//        }
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"error%@", error);
+//    }];
+//}
 
 // 可用骑马券
 - (IBAction)clickForTitleLeft:(id)sender {

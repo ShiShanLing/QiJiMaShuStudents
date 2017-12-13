@@ -203,7 +203,7 @@
     self.timeLabel.text = [NSString stringWithFormat:@"%@ - %@", startTime, endTime];
     // 教练
     NSString *coachText = nil;
-    NSString *nameStr = [NSString stringWithFormat:@"教练: %@ %@", model.coachName ,model.subType==0?@"科目二":@"科目三"];
+    NSString *nameStr = [NSString stringWithFormat:@"教练: %@ %@", model.coachName ,model.subType==0?@"初级课程":@"中级课程"];
     NSString *carStr = nil;
     coachText =  nameStr;
     NSMutableAttributedString *coachAttText = [[NSMutableAttributedString alloc] initWithString:coachText];
@@ -211,7 +211,7 @@
     self.coachLabel.attributedText = coachAttText;
     // 地址
     self.addrLabel.text = [NSString stringWithFormat:@"地址: %@", @"杭州市上城区.婺江路"];
-    // 金额 科目类型
+    // 金额 课程类型
     NSString *costText = nil;
    // NSLog(@"model%@ ", model);
     NSString *costStr = [NSString stringWithFormat:@"价格: %@", model.price];

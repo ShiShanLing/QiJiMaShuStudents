@@ -76,7 +76,11 @@
         _viewControllerArray = [NSMutableArray array];
         for (int i = 0; i <= 5; i++) {
             MyOrderViewController *MyOrderVC = [[MyOrderViewController alloc] initWithNibName:@"MyOrderViewController" bundle:nil];
-            MyOrderVC.index = i;
+            if (i == 0) {
+                MyOrderVC.index  = 6;
+            }else {
+                MyOrderVC.index = i - 1;
+            }
             [_viewControllerArray addObject:MyOrderVC];
         }
     }
@@ -84,18 +88,19 @@
 }
 //骑马订单
 - (IBAction)handleStudentDriverOrder:(UIButton *)sender {
-    FYLPageViewController *FYLPageVC =[[FYLPageViewController alloc]initWithTitles:@[@"未完成",@"已完成",@"取消中",@"已取消",@"申诉中",@"已关闭"] viewControllers:self.viewControllerArray];
-    UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
-    //NAVC.navigationBarHidden = YES;
+    EnrollDetailsVC *VC = [[EnrollDetailsVC alloc] init];
+    UINavigationController *NAVC = [[UINavigationController alloc] initWithRootViewController:VC];
     [self setHidesBottomBarWhenPushed:YES];
     [self presentViewController:NAVC animated:YES completion:nil];
 }
 //报名订单
 - (IBAction)handleSignUpOrder:(UIButton *)sender {
-    EnrollDetailsVC *VC = [[EnrollDetailsVC alloc] init];
-    UINavigationController *NAVC = [[UINavigationController alloc] initWithRootViewController:VC];
+    MyOrderViewController *FYLPageVC =[[MyOrderViewController alloc]initWithNibName:@"MyOrderViewController" bundle:nil];
+    UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
+    //NAVC.navigationBarHidden = YES;
     [self setHidesBottomBarWhenPushed:YES];
     [self presentViewController:NAVC animated:YES completion:nil];
+    
 }
 //预约考试
 - (IBAction)handleReservationTest:(UIButton *)sender {
@@ -106,7 +111,6 @@
         NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
         URL_Dic[@"stuId"] = [UserDataSingleton mainSingleton].studentsId;
         NSLog(@"URL_Dic%@", URL_Dic);
-        
         AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
         [session POST:URL_Str parameters:URL_Dic progress:^(NSProgress * _Nonnull uploadProgress) {
             NSLog(@"uploadProgress%@", uploadProgress);
@@ -311,95 +315,8 @@
     self.couponsLabel.text = [NSString stringWithFormat:@"%d",model.ticket];
     self.currencyLabel.text = [NSString stringWithFormat:@"%ld",model.points];
     NSString *subState;
-    /**
-     *  `sub_state` tinyint(1) DEFAULT '0' COMMENT '科目状态(0:未参加科目考试1:科目一已通过2:科目二已通过3:科目三已通过4:科目四已通过)',
-     `state` tinyint(1) DEFAULT '0' COMMENT '预约考试状态(0:未预约1:待审批2:审批通过3:审批未通过)',
-     
-     */
-    if ([UserDataSingleton mainSingleton].subState.intValue == 20 || [UserDataSingleton mainSingleton].subState.length == 0) {
-        subState = @"预约考试";
-    }
-    switch ([UserDataSingleton mainSingleton].subState.intValue) {
-        case 0:
-            switch ([UserDataSingleton mainSingleton].state.intValue) {
-                case 0:
-                    subState = @"预约科一考试";
-                    break;
-                case 1:
-                    subState = @"科一预约等待审核";
-                    break;
-                case 2:
-                    subState = @"科一考试预约成功,等待考试!";
-                    break;
-                case 3:
-                    subState = @"预约科一考试";
-                    break;
-                default:
-                    break;
-            }
-            
-            break;
-        case 1:
-            switch ([UserDataSingleton mainSingleton].state.intValue) {
-                case 0:
-                    subState = @"预约科二考试";
-                    break;
-                case 1:
-                    subState = @"科二预约等待审核";
-                    break;
-                case 2:
-                    subState = @"科二考试预约成功,等待考试!";
-                    break;
-                case 3:
-                    subState = @"预约科二考试";
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 2:
-            switch ([UserDataSingleton mainSingleton].state.intValue) {
-                case 0:
-                    subState = @"预约科三考试";
-                    break;
-                case 1:
-                    subState = @"科三预约等待审核";
-                    break;
-                case 2:
-                    subState = @"科三考试预约成功,等待考试!";
-                    break;
-                case 3:
-                    subState = @"预约科三考试";
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 3:
-            switch ([UserDataSingleton mainSingleton].state.intValue) {
-                case 0:
-                    subState = @"预约科四考试";
-                    break;
-                case 1:
-                    subState = @"科四预约等待审核";
-                    break;
-                case 2:
-                    subState = @"科四考试预约成功,等待考试!";
-                    break;
-                case 3:
-                    subState = @"预约科四考试";
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 4:
-            subState = @"科四考试已经通过";
-            break;
-        default:
-            break;
-    }
-    self.studentDriverStateLabel.text = subState;
+  
+    self.studentDriverStateLabel.text = @"";
 }
 
 @end

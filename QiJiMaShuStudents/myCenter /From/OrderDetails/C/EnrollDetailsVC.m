@@ -98,7 +98,6 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)notice:(id)sender{
-    
     [self RequestInterface];
 }
 /**

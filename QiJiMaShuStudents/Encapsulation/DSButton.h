@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "StudentDriverOrderModel+CoreDataClass.h"
 @interface DSButton : UIButton
 
 
@@ -42,6 +42,6 @@
  */
 @property (nonatomic, copy) NSIndexPath *indexPath;
 
-@property (strong, nonatomic) NSString *phone;
-
+@property (copy, nonatomic) NSString *phone;
+@property (nonatomic,strong)StudentDriverOrderModel *SDOModel;
 @end

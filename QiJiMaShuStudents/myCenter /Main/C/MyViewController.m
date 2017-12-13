@@ -546,18 +546,22 @@
 - (NSMutableArray *)viewControllerArray {
     if (!_viewControllerArray) {
         _viewControllerArray = [NSMutableArray array];
-        for (int i = 0; i <= 5; i++) {
+        for (int i = 0; i <= 6; i++) {
             MyOrderViewController *MyOrderVC = [[MyOrderViewController alloc] initWithNibName:@"MyOrderViewController" bundle:nil];
-            MyOrderVC.index = i;
+            if (i == 0) {
+                MyOrderVC.index  = 6;
+            }else {
+                MyOrderVC.index = i - 1;
+            }
+            
             [_viewControllerArray addObject:MyOrderVC];
         }
     }
     return _viewControllerArray;
 }
-
 //我的预约订单
  - (IBAction)clickForChongzhi:(id)sender {
-     FYLPageViewController *FYLPageVC =[[FYLPageViewController alloc]initWithTitles:@[@"未完成",@"已完成",@"取消中",@"已取消",@"申诉中",@"已关闭"] viewControllers:self.viewControllerArray];
+     FYLPageViewController *FYLPageVC =[[FYLPageViewController alloc]initWithTitles:@[@"一键预约订单",@"未完成",@"已完成",@"取消中",@"已取消",@"申诉中",@"已关闭"] viewControllers:self.viewControllerArray];
      UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
      //NAVC.navigationBarHidden = YES;
      [self setHidesBottomBarWhenPushed:YES];

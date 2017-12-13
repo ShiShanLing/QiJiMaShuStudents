@@ -26,8 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *couponMemberId;
 @property (nullable, nonatomic, copy) NSDate *createTime;
 @property (nullable, nonatomic, copy) NSString * schoolId;
+@property (nullable, nonatomic, copy) NSString * coachName;
 @property (nonatomic) int16_t state;
 @property (nullable, nonatomic, copy) NSString *schoolName;
+@property (nullable, nonatomic, copy) NSString *phone;
 - (void)setValue:(id)value forKey:(NSString *)key;
 @end
 

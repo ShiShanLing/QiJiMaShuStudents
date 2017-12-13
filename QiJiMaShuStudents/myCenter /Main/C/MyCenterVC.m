@@ -173,94 +173,11 @@
         
         ServiceDisplayTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ServiceDisplayTVCell" forIndexPath:indexPath];
         NSString *subState;
-        /**
-         *  `sub_state` tinyint(1) DEFAULT '0' COMMENT '科目状态(0:未参加科目考试1:科目一已通过2:科目二已通过3:科目三已通过4:科目四已通过)',
-         `state` tinyint(1) DEFAULT '0' COMMENT '预约考试状态(0:未预约1:待审批2:审批通过3:审批未通过)',
-
-         */
+     
         if ([UserDataSingleton mainSingleton].subState.intValue == 20 || [UserDataSingleton mainSingleton].subState.length == 0) {
-            subState = @"预约考试";
+            subState = @"预约团建";
         }
-        switch ([UserDataSingleton mainSingleton].subState.intValue) {
-            case 0:
-                switch ([UserDataSingleton mainSingleton].state.intValue) {
-                    case 0:
-                        subState = @"预约科一考试";
-                        break;
-                    case 1:
-                        subState = @"科一预约等待审核";
-                        break;
-                    case 2:
-                        subState = @"科一考试预约成功,等待考试!";
-                        break;
-                    case 3:
-                        subState = @"预约科一考试";
-                        break;
-                    default:
-                        break;
-                }
-                
-                break;
-            case 1:
-                switch ([UserDataSingleton mainSingleton].state.intValue) {
-                    case 0:
-                        subState = @"预约科二考试";
-                        break;
-                    case 1:
-                        subState = @"科二预约等待审核";
-                        break;
-                    case 2:
-                        subState = @"科二考试预约成功,等待考试!";
-                        break;
-                    case 3:
-                        subState = @"预约科二考试";
-                        break;
-                    default:
-                        break;
-                }
-                break;
-            case 2:
-                switch ([UserDataSingleton mainSingleton].state.intValue) {
-                    case 0:
-                        subState = @"预约科三考试";
-                        break;
-                    case 1:
-                        subState = @"科三预约等待审核";
-                        break;
-                    case 2:
-                        subState = @"科三考试预约成功,等待考试!";
-                        break;
-                    case 3:
-                        subState = @"预约科三考试";
-                        break;
-                    default:
-                        break;
-                }
-                break;
-            case 3:
-                switch ([UserDataSingleton mainSingleton].state.intValue) {
-                    case 0:
-                        subState = @"预约科四考试";
-                        break;
-                    case 1:
-                        subState = @"科四预约等待审核";
-                        break;
-                    case 2:
-                        subState = @"科四考试预约成功,等待考试!";
-                        break;
-                    case 3:
-                        subState = @"预约科四考试";
-                        break;
-                    default:
-                        break;
-                }
-                break;
-            case 4:
-                subState = @"科四考试已经通过";
-                break;
-            default:
-                break;
-        }
+     
         NSArray *array1 = @[@"骑马订单", @"报名订单", subState,@"分享注册"];
         NSArray *array2 = @[@"骑马时间的预约订单", @"报名课程的订单", subState,@"点击分享"];
         cell.titleLabel.text = array1[indexPath.section-1];
@@ -273,9 +190,15 @@
 - (NSMutableArray *)viewControllerArray {
     if (!_viewControllerArray) {
         _viewControllerArray = [NSMutableArray array];
-        for (int i = 0; i <= 5; i++) {
+        for (int i = 0; i <= 6; i++) {
+            
              MyOrderViewController *MyOrderVC = [[MyOrderViewController alloc] initWithNibName:@"MyOrderViewController" bundle:nil];
-            MyOrderVC.index = i;
+            if (i == 0) {
+                MyOrderVC.index  = 6;
+            }else {
+                MyOrderVC.index = i - 1;
+            }
+            
             [_viewControllerArray addObject:MyOrderVC];
         }
     }
@@ -286,7 +209,7 @@
    
     if (indexPath.section == 1) {
         //0:未完成,1:已完结,2:取消中,3:已取消,4:申诉中,5:已关闭)
-        FYLPageViewController *FYLPageVC =[[FYLPageViewController alloc]initWithTitles:@[@"未完成",@"已完成",@"取消中",@"已取消",@"申诉中",@"已关闭"] viewControllers:self.viewControllerArray];
+        FYLPageViewController *FYLPageVC =[[FYLPageViewController alloc]initWithTitles:@[@"一键预约订单",@"未完成",@"已完成",@"取消中",@"已取消",@"申诉中",@"已关闭"] viewControllers:self.viewControllerArray];
         UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
         //NAVC.navigationBarHidden = YES;
         [self setHidesBottomBarWhenPushed:YES];

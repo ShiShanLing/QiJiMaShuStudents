@@ -32,6 +32,10 @@
         self.createTime = detaildate;
     }else  if([key isEqualToString:@"description"]){
         self.descriptionStr = [NSString stringWithFormat:@"%@", value];
+    }else if([key isEqualToString:@"balanceChange"]){
+        
+     self.balanceChange    = [NSString stringWithFormat:@"%@", value];
+        NSLog(@"CoreDataProperties.h%@-----%@", value,self.balanceChange);
     }else{
         [super setValue:value forKey:key];
     }

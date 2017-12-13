@@ -22,11 +22,8 @@
 
 @property (strong, nonatomic) NSDictionary *orderInfoDic;       // 订单信息
 
-
-
 - (IBAction)clickForCommit:(id)sender;
 @end
-
 
 @implementation MyOrderEvaluationViewController
 - (IBAction)return:(id)sender {
@@ -55,7 +52,6 @@
     [self.teachMannerView addSubview:self.teachMannerStarView];
     [self.teachMannerStarView changeStarForegroundViewWithScore:4.0];
     _teachMannerScoreStr = [NSString stringWithFormat:@"%0.1f", 4.0];
-    
     // 教学质量
     self.teachQualityStarView = [[TQStarRatingView alloc] initWithFrame:CGRectMake(89, 0, 93, 17) numberOfStar:5];
     self.teachQualityStarView.couldClick = YES;

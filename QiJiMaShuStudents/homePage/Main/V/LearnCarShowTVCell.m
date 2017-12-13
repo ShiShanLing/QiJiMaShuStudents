@@ -9,33 +9,33 @@
 #import "LearnCarShowTVCell.h"
 
 @interface LearnCarShowTVCell ()
-@property (weak, nonatomic) IBOutlet UIButton *icon;
+
+@property (weak, nonatomic) IBOutlet UIImageView *titleImage;
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 /**
  *这个使用的btn 不要介意 拉错了 label就能实现
  */
 @property (weak, nonatomic) IBOutlet UIButton *priceBtn;
 @property (weak, nonatomic) IBOutlet UIButton *directionBtn;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
 @end
 
 @implementation LearnCarShowTVCell
 
 -(void)setModel:(CourseListModel *)model {
-    
+    self.titleImage.layer.cornerRadius = 35;
+    self.titleImage.layer.masksToBounds = YES;
+    self.directionBtn.layer.cornerRadius = 11;
+    self.directionBtn.layer.masksToBounds = YES;
     self.titleLabel.text = model.goodsName;
-    [self.priceBtn setTitle:[NSString stringWithFormat:@"¥:%.2f", model.goodsStorePrice] forState:(UIControlStateNormal)];
-    
+    self.priceLabel.text = [NSString stringWithFormat:@"¥:%.2f", model.goodsStorePrice];
 }
 
 
 
 -(void)layoutSubviews {
-    
-    self.icon.userInteractionEnabled = NO;
-    self.priceBtn.userInteractionEnabled = NO;
-    self.priceBtn.layer.cornerRadius = 3;
-    self.priceBtn.layer.masksToBounds = YES;
     self.directionBtn.userInteractionEnabled = NO;
 
 }

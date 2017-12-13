@@ -13,21 +13,19 @@
 @interface GoodsIntroductionTVCell ()
 
 /**
- 驾校logo 或者展示图片
+ 马场logo 或者展示图片
  */
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
-
 /**
- 驾校名字
+ 马场名字
  */
 @property (weak, nonatomic) IBOutlet UILabel *DrivingLabel;
 /**
  *商品价钱
  */
 @property (weak, nonatomic) IBOutlet UILabel *goodsPrice;
-
 /**
- *驾校或者 商品的介绍
+ *马场或者 商品的介绍
  */
 @property (weak, nonatomic) IBOutlet UILabel *introduceLabel;
 

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSDate *createTime;
 @property (nonatomic) int16_t accountType;
-@property (nonatomic) int64_t balanceChange;
+@property (nullable, nonatomic, copy) NSString *balanceChange;
 
 @property (nullable, nonatomic, copy) NSString *logId;
 @property (nullable, nonatomic, copy) NSString *descriptionStr;

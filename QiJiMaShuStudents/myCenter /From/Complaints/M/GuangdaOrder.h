@@ -34,8 +34,8 @@ typedef NS_ENUM(NSUInteger, OrderType) {
 @property (copy, nonatomic) NSString *delMoney;     // 骑马币抵价
 @property (copy, nonatomic) NSString *carLicense;   // 牌照
 @property (copy, nonatomic) NSString *modelid;      // 准教马型
-@property (copy, nonatomic) NSString *subjectID;    // 科目ID
-@property (copy, nonatomic) NSString *subjectName;  // 科目
+@property (copy, nonatomic) NSString *subjectID;    // 课程ID
+@property (copy, nonatomic) NSString *subjectName;  // 课程
 @property (copy, nonatomic) NSString *courseType;   // 5：代表是体验课
 @property (copy, nonatomic) NSString *reason;       // 投诉原因
 @property (copy, nonatomic) NSString *complaintContent;  // 投诉内容
