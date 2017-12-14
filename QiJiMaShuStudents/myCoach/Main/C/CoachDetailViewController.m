@@ -109,7 +109,7 @@ if([UserDataSingleton mainSingleton].coachId.length == 0){
 }else{
 	self.noCoachView.hidden = YES;
 }
-      self.noCoachView.hidden = YES;
+    
     self.navigationController.navigationBarHidden =YES;
     
 }

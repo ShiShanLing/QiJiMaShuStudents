@@ -2003,7 +2003,7 @@
 				TargetAttributes = {
 					A1541E371FC2AF8200D84AC6 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					A1541E521FC2AF8200D84AC6 = {
 						CreatedOnToolsVersion = 9.1;
@@ -2537,7 +2537,8 @@
 			baseConfigurationReference = BDFA6D6B45E26CC6C434551F /* Pods-QiJiMaShuStudents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3ZC4VG35Y5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2545,10 +2546,13 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QiJiMaShuStudents/QiJiMaShuStudents.pch";
 				INFOPLIST_FILE = QiJiMaShuStudents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.QiJIMaShuStudenrs.www-iOSApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "73f0e7f8-95c9-4959-ac11-c0b185537529";
+				PROVISIONING_PROFILE_SPECIFIER = qijimashuxueyuan;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2557,7 +2561,8 @@
 			baseConfigurationReference = 67B3011A8A0CDF06F906B368 /* Pods-QiJiMaShuStudents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3ZC4VG35Y5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2565,10 +2570,13 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QiJiMaShuStudents/QiJiMaShuStudents.pch";
 				INFOPLIST_FILE = QiJiMaShuStudents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.QiJIMaShuStudenrs.www-iOSApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "73f0e7f8-95c9-4959-ac11-c0b185537529";
+				PROVISIONING_PROFILE_SPECIFIER = qijimashuxueyuan;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

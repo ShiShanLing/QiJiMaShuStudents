@@ -48,29 +48,45 @@
         return;
     }
     
-    NSString *URL_Str = [NSString stringWithFormat:@"%@/student/api/quickMakeReservation",kURL_SHY];
-    NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
-    URL_Dic[@"stuId"] =[UserDataSingleton mainSingleton].studentsId;
-    __weak  AppDelegate *VC = self;
-    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-    [session POST:URL_Str parameters:URL_Dic progress:^(NSProgress * _Nonnull uploadProgress) {
-        NSLog(@"uploadProgress%@", uploadProgress);
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"responseObject%@", responseObject);
-        NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
-        if ([resultStr isEqualToString:@"1"]) {
-            [VC showAlert:responseObject[@"msg"]];
-            MyOrderViewController *FYLPageVC =[[MyOrderViewController alloc]initWithNibName:@"MyOrderViewController" bundle:nil];
-            UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
-            [VC.window.rootViewController setHidesBottomBarWhenPushed:YES];
-            [VC.window.rootViewController presentViewController:NAVC animated:YES completion:nil];
-      
-        }else {
-            [VC showAlert:responseObject[@"msg"]];
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"error%@", error);
+    UIAlertController *alertV = [UIAlertController alertControllerWithTitle:@"" message:@"亲爱的会员,您可直接到俱乐部前台办理马术训练手册!" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"立即预约" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        NSString *URL_Str = [NSString stringWithFormat:@"%@/student/api/quickMakeReservation",kURL_SHY];
+        NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
+        URL_Dic[@"stuId"] =[UserDataSingleton mainSingleton].studentsId;
+        __weak  AppDelegate *VC = self;
+        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+        [session POST:URL_Str parameters:URL_Dic progress:^(NSProgress * _Nonnull uploadProgress) {
+            NSLog(@"uploadProgress%@", uploadProgress);
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSLog(@"responseObject%@", responseObject);
+            NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
+            if ([resultStr isEqualToString:@"1"]) {
+                [VC showAlert:responseObject[@"msg"]];
+                MyOrderViewController *FYLPageVC =[[MyOrderViewController alloc]initWithNibName:@"MyOrderViewController" bundle:nil];
+                UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
+                [VC.window.rootViewController setHidesBottomBarWhenPushed:YES];
+                [VC.window.rootViewController presentViewController:NAVC animated:YES completion:nil];
+            }else {
+                [VC showAlert:responseObject[@"msg"]];
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"error%@", error);
+        }];
     }];
+    
+    UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"我再想想" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+    }];
+    // 3.将“取消”和“确定”按钮加入到弹框控制器中
+    [alertV addAction:cancle];
+    [alertV addAction:confirm];
+    // 4.控制器 展示弹框控件，完成时不做操作
+    [self.window.rootViewController presentViewController:alertV animated:YES completion:^{
+        nil;
+    }];
+
+    
+   
 
     
 }

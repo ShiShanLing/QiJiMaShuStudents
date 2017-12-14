@@ -211,7 +211,7 @@
     if (indexPath.section == 0) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
         CGRect frame = CGRectMake(0, 0, kScreen_widht, 200);
-        NSArray *imageArr = @[@"Img1",@"Img2",@"Img3",@"Img4",@"Img5",@"Img6"];
+        NSArray *imageArr = @[@"Img1",@"Img2",@"Img3",@"Img4",@"Img5"];
         CLCycleView *cycleView = [[CLCycleView alloc] initWithFrame:frame duration:3 imageArr:imageArr];
         cycleView.delegate = self;
         cycleView.currentPageIndicatorTintColor = [UIColor lightGrayColor];
