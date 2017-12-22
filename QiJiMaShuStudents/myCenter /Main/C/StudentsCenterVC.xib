@@ -16,8 +16,6 @@
                 <outlet property="HeadPortraitImageView" destination="8eY-BF-V6I" id="mye-f2-s1m"/>
                 <outlet property="couponsLabel" destination="oyg-bt-OKy" id="Dak-c4-yVw"/>
                 <outlet property="currencyLabel" destination="Gsn-jF-QSa" id="tv0-q5-XMS"/>
-                <outlet property="messagesLabel" destination="PwU-C4-z2N" id="p39-Rv-jni"/>
-                <outlet property="messagesNumView" destination="W7E-4U-0kx" id="HhN-2O-BF1"/>
                 <outlet property="userNameLabel" destination="UQx-pK-654" id="fhI-wK-one"/>
                 <outlet property="userPhoneLabel" destination="jKR-Y8-94j" id="mrX-UO-fK9"/>
                 <outlet property="view" destination="Opr-r6-7x7" id="LR5-ht-bmf"/>
@@ -363,7 +361,7 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyg-bt-OKy">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyg-bt-OKy">
                                             <rect key="frame" x="0.0" y="12" width="125" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="wHk-LS-ySr">
@@ -1118,45 +1116,13 @@
                                 <action selector="handleMySetUp:" destination="-1" eventType="touchUpInside" id="s5N-8J-wHP"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg2-ZQ-Cwl" userLabel="myInfoBtn">
-                            <rect key="frame" x="0.0" y="20" width="55" height="44"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="55" id="cd2-gt-m4V"/>
-                            </constraints>
-                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                            <state key="normal" image="icon-notice">
-                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7E-4U-0kx" userLabel="num">
-                            <rect key="frame" x="30" y="25" width="15" height="15"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwU-C4-z2N">
-                                    <rect key="frame" x="2" y="0.0" width="11" height="15"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" red="0.83851969240000002" green="0.19297191499999999" blue="0.1879979074" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="15" id="ILm-gd-o9S"/>
-                                <constraint firstAttribute="height" constant="15" id="Rpk-of-njv"/>
-                            </constraints>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="wg2-ZQ-Cwl" firstAttribute="top" secondItem="lSQ-wU-TxW" secondAttribute="top" constant="20" id="20M-SP-xnh"/>
                         <constraint firstItem="fQG-C7-wfy" firstAttribute="top" secondItem="lSQ-wU-TxW" secondAttribute="top" constant="20" id="DTg-YH-EZw"/>
                         <constraint firstAttribute="height" constant="64" id="SiR-Vo-VKn"/>
                         <constraint firstAttribute="bottom" secondItem="fQG-C7-wfy" secondAttribute="bottom" id="W70-KC-jHc"/>
-                        <constraint firstAttribute="bottom" secondItem="wg2-ZQ-Cwl" secondAttribute="bottom" id="bTJ-M6-rEe"/>
-                        <constraint firstItem="wg2-ZQ-Cwl" firstAttribute="top" secondItem="W7E-4U-0kx" secondAttribute="bottom" constant="-20" id="e1j-WK-HdY"/>
-                        <constraint firstItem="wg2-ZQ-Cwl" firstAttribute="leading" secondItem="lSQ-wU-TxW" secondAttribute="leading" id="hy1-pk-uPb"/>
                         <constraint firstAttribute="trailing" secondItem="fQG-C7-wfy" secondAttribute="trailing" id="nSs-Ao-FJG"/>
-                        <constraint firstItem="W7E-4U-0kx" firstAttribute="leading" secondItem="wg2-ZQ-Cwl" secondAttribute="trailing" constant="-25" id="t1Z-rM-bTx"/>
                     </constraints>
                 </view>
             </subviews>
@@ -1181,7 +1147,6 @@
         <image name="SignUpOrder" width="16" height="16"/>
         <image name="ic_go" width="7" height="13"/>
         <image name="ico_客服" width="60" height="60"/>
-        <image name="icon-notice" width="22" height="22"/>
         <image name="icon_portrait_default" width="82" height="82"/>
         <image name="icon_setting1" width="19" height="18"/>
         <image name="im_bg" width="320" height="195"/>

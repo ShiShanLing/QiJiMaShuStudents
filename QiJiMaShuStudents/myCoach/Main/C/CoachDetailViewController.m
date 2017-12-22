@@ -76,6 +76,12 @@
  */
 @property (nonatomic, strong)NSMutableArray * coachDetailsArray;
 
+
+/**
+ *
+ */
+@property (nonatomic, strong)NSString * coachPhone;
+
 @end
 
 @implementation CoachDetailViewController
@@ -225,7 +231,6 @@ if([UserDataSingleton mainSingleton].coachId.length == 0){
     _searchPage = 0;
     [self getComments];
 }
-
 /* 加载更多 */
 - (void)bottomPullToMoreTriggered:(DSBottomPullToMoreManager *)manager {
     _searchPage = _curPage + 1;
@@ -238,13 +243,12 @@ if([UserDataSingleton mainSingleton].coachId.length == 0){
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (self.coachDetailsArray.count == 0) {
+    if (self.commentArray.count == 0) {
         return 0;
     }else {
         return 6;
     }
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *indefinder = @"CommentTableViewCell";
     
@@ -260,7 +264,7 @@ if([UserDataSingleton mainSingleton].coachId.length == 0){
     cell.avatar.image = [UIImage imageNamed:@"hashiqi"];
     cell.time.text = @"2017-08-17";
     cell.content.text =@"千年一遇的好教练,长得也很帅!";
-    cell.nick.text = @"石山岭";
+    cell.nick.text = @"石**";
     return cell;
 }
 
@@ -272,7 +276,7 @@ if([UserDataSingleton mainSingleton].coachId.length == 0){
     bottomLine.backgroundColor = MColor(223, 223, 223);
     [headerView.contentView addSubview:bottomLine];
     
-    if(self.commentArray.count != 0){
+    if(self.commentArray.count == 0){
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(13, 0, kScreen_widht, headerView.height)];
         label.font = [UIFont systemFontOfSize:12.0];
         label.textColor = MColor(153, 153, 153);
@@ -331,6 +335,7 @@ if([UserDataSingleton mainSingleton].coachId.length == 0){
 #pragma mark - private
 - (void)showData:(CoachDetailsModel *)model{
     {
+        self.coachPhone = model.phone;
         // 头像
         self.portrait.image = [UIImage imageNamed:@"hashiqi"];
         // 姓名
@@ -379,7 +384,7 @@ if([UserDataSingleton mainSingleton].coachId.length == 0){
     self.countLabel.text = [NSString stringWithFormat:@"%@", count];
     self.countDesLabel.text = @"预约次数";
     // 准教马型
-    self.carType.text = [NSString stringWithFormat:@"准教马型：%@", model.carTypeName];
+    self.carType.text = [NSString stringWithFormat:@"教练教龄：%@", model.teachAge];
     // 体验课
     self.ADBottomView.hidden = NO;
     self.pageControl.hidden = NO;
@@ -448,6 +453,7 @@ if([UserDataSingleton mainSingleton].coachId.length == 0){
     AppointCoachViewController *nextController = [[AppointCoachViewController alloc] initWithNibName:@"AppointCoachViewController" bundle:nil];
     UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:nextController];
     navigationController.navigationBarHidden = YES;
+    nextController.coachPhone =  self.coachPhone;
     [self setHidesBottomBarWhenPushed:YES];
     [self presentViewController:navigationController animated:YES completion:nil];
 }

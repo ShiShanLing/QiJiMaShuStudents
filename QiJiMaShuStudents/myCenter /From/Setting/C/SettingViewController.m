@@ -97,24 +97,25 @@
 
 // 投诉
 - (IBAction)MyComplaint:(id)sender {
-    
-        ComplaintViewController *viewController = [[ComplaintViewController alloc] initWithNibName:@"ComplaintViewController" bundle:nil];
-        [self.navigationController pushViewController:viewController animated:YES];
+[self  showAlert:@"该功能尚未开通"];
+//        ComplaintViewController *viewController = [[ComplaintViewController alloc] initWithNibName:@"ComplaintViewController" bundle:nil];
+//        [self.navigationController pushViewController:viewController animated:YES];
     
 }
 
 //意见反馈
 - (IBAction)clickForFeedback:(id)sender {
-    if ([[CommonUtil currentUtil] isLogin]) {
-        FeedbackViewController *nextController = [[FeedbackViewController alloc] initWithNibName:@"FeedbackViewController" bundle:nil];
-        [self.navigationController pushViewController:nextController animated:YES];
-    }
+    [self  showAlert:@"该功能尚未开通"];
+//        FeedbackViewController *nextController = [[FeedbackViewController alloc] initWithNibName:@"FeedbackViewController" bundle:nil];
+//        [self.navigationController pushViewController:nextController animated:YES];
+    
 }
 
 //关于我们
 - (IBAction)clickForAbout:(id)sender {
-    AboutViewController *nextController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
-    [self.navigationController pushViewController:nextController animated:YES];
+    [self  showAlert:@"该功能尚未开通"];
+//    AboutViewController *nextController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+//    [self.navigationController pushViewController:nextController animated:YES];
 }
 
 //关闭
@@ -138,11 +139,7 @@
 //陪驾协议
 - (IBAction)protocolClick:(id)sender {
     NSString *url = @"http://www.xiaobaxueche.com/serviceprotocol-s.html";
-//    XBWebViewController *nextVC = [[XBWebViewController alloc] init];
-//    nextVC.mainUrl = url;
-//    nextVC.titleStr = @"陪驾服务协议";
-//    nextVC.closeBtnHidden = YES;
-//    [self.navigationController pushViewController:nextVC animated:YES];
+    [self  showAlert:@"该功能尚未开通"];
 }
 
 //退出登录

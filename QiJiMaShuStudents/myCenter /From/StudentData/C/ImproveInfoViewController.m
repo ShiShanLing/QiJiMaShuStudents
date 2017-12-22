@@ -433,8 +433,39 @@
 #pragma mark - 网络请求
 // 提交账号信息
 - (void)postPerfectPersonInfo {
- 
+    
+    if (self.birthdayField.text.length == 0) {
+        [self showAlert:@"请选择您的出生日期"];
+        return;
+    }
+    
+    self.selectedDate =    [CommonUtil getDateForString:self.birthdayField.text format:@"yyyy-MM-dd"];
+    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[self.selectedDate timeIntervalSince1970]];
+    NSString *URL_Str = [NSString stringWithFormat:@"%@/student/api/studentInfo",kURL_SHY];
+    NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
+    URL_Dic[@"stuId"] = [UserDataSingleton mainSingleton].studentsId;
+    URL_Dic[@"sex"] = [self.sexField.text isEqualToString:@"男"]?@"1":@"2";
+    URL_Dic[@"birthday"] = timeSp;
+    __weak  ImproveInfoViewController *VC = self;
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    [session POST:URL_Str parameters:URL_Dic progress:^(NSProgress * _Nonnull uploadProgress) {
+        NSLog(@"uploadProgress%@", uploadProgress);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"responseObject%@", responseObject);
+        NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
+        if ([resultStr isEqualToString:@"1"]) {
+            [VC showAlert:responseObject[@"msg"] time:1.2];
+            [VC.navigationController popViewControllerAnimated:YES];
+        }else {
+            [VC showAlert:responseObject[@"msg"] time:1.2];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error%@", error);
+        [VC showAlert:@"网络超时,请稍后重试!"];
+    }];
 
+    
+    
 
 }
 

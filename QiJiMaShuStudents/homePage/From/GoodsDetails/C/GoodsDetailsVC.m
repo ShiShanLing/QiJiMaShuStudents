@@ -184,7 +184,7 @@
     if (indexPath.section == 0) {
         return 104;
     }else {
-        return 444;
+        return 519;
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {

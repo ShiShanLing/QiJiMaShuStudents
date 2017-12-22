@@ -258,7 +258,7 @@
 //    }];
 //}
 
-// 可用骑马券
+// 可用优惠券
 - (IBAction)clickForTitleLeft:(id)sender {
     if(selectIndex == 1)
         return;
@@ -269,7 +269,7 @@
     [self requestData:@"0"];
 }
 
-// 历史骑马券
+// 历史优惠券
 - (IBAction)clickForTitleRight:(id)sender {
     if(selectIndex == 2)
         return;

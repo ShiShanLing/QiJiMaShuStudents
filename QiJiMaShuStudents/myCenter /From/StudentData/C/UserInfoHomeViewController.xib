@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="mainScrollView" destination="ISS-fp-Fbn" id="2H2-Fj-0md"/>
                 <outlet property="nameField" destination="vw9-0l-sK4" id="Om1-ol-kAM"/>
+                <outlet property="photoView" destination="wLD-fA-STA" id="rKM-6u-c12"/>
                 <outlet property="portraitImageView" destination="evt-Pl-C2v" id="aza-6Y-w3k"/>
                 <outlet property="userView" destination="0a6-q8-eCu" id="MlW-C8-Lpe"/>
                 <outlet property="view" destination="X6T-Nr-fOX" id="w2i-Sz-ZSJ"/>
@@ -515,6 +516,72 @@
             </constraints>
             <point key="canvasLocation" x="-9.5" y="229.5"/>
         </view>
+        <view contentMode="scaleToFill" id="wLD-fA-STA" userLabel="弹框">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQ3-yR-aay" userLabel="背景">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="9VA-x6-0RX" appends="YES" id="KpX-nc-lKD"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO5-Cv-Jil">
+                    <rect key="frame" x="71" y="284.5" width="233" height="98"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoz-gN-Xoq">
+                            <rect key="frame" x="0.0" y="0.0" width="233" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="拍照">
+                                <color key="titleColor" red="0.18220192190000001" green="0.18219646810000001" blue="0.1821995676" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickForCamera:" destination="-1" eventType="touchUpInside" id="G8c-Ob-SDT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lH-jM-ibw">
+                            <rect key="frame" x="0.0" y="49" width="233" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="相册">
+                                <color key="titleColor" red="0.18220192190000001" green="0.18219646810000001" blue="0.1821995676" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickForAlbum:" destination="-1" eventType="touchUpInside" id="Pgh-vX-OS0"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47K-AO-HRM" userLabel="underline">
+                            <rect key="frame" x="0.0" y="49" width="233" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.73257553580000001" green="0.73255372050000001" blue="0.73256611819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="233" id="GgV-8L-bfe"/>
+                        <constraint firstAttribute="height" constant="98" id="jKL-z5-LKv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="ZO5-Cv-Jil" secondAttribute="centerX" id="3YO-Ux-dsi"/>
+                <constraint firstItem="dQ3-yR-aay" firstAttribute="leading" secondItem="wLD-fA-STA" secondAttribute="leading" id="8ad-K6-y0o"/>
+                <constraint firstAttribute="bottom" secondItem="dQ3-yR-aay" secondAttribute="bottom" id="Ec7-db-Agt"/>
+                <constraint firstItem="dQ3-yR-aay" firstAttribute="top" secondItem="wLD-fA-STA" secondAttribute="top" id="G6f-LL-Pxj"/>
+                <constraint firstAttribute="trailing" secondItem="dQ3-yR-aay" secondAttribute="trailing" id="peA-dD-V4B"/>
+                <constraint firstAttribute="centerY" secondItem="ZO5-Cv-Jil" secondAttribute="centerY" id="rXZ-Yd-R7Z"/>
+            </constraints>
+            <point key="canvasLocation" x="1592" y="355"/>
+        </view>
+        <tapGestureRecognizer id="9VA-x6-0RX">
+            <connections>
+                <action selector="clickForCancelPortraitChange:" destination="-1" id="3HT-0P-C2I"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="arrow_back_userinfohome" width="10" height="18"/>

@@ -55,18 +55,33 @@
     
     self.navigationController.navigationBar.barTintColor = kNavigation_Color;//导航条颜色
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:kFit(18)]}];//改变导航条标题的颜色与大小
+    //返回按钮
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];//去除导航条上图片的渲染色
     UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"return_black"] style:UIBarButtonItemStylePlain target:self action:@selector(handleReturn)];//自定义导航条按钮
     self.navigationItem.leftBarButtonItem = temporaryBarButtonItem;
-    
     UITapGestureRecognizer *singleFingerOne = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                       action:@selector(handleSingleFingerEvent:)];
     singleFingerOne.numberOfTouchesRequired = 1; //手指数
     singleFingerOne.numberOfTapsRequired = 1; //tap次
-    
     [self.view addGestureRecognizer:singleFingerOne];
-    
+    //帮组按钮
+    UIBarButtonItem *helpBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"收费标准" style:(UIBarButtonItemStylePlain) target:self action:@selector(handleHelp)];
+    self.navigationItem.rightBarButtonItem = helpBarButtonItem;
 }
+
+- (void)handleHelp {
+    UIAlertController *alertV = [UIAlertController alertControllerWithTitle:@"收费标准" message:@"请和当值教练确定实际培训时常并支付金额。收费标准参照俱乐部初级会员收费标准.298/鞍+100元教练费/鞍时（自学不收取教练费）" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    // 3.将“取消”和“确定”按钮加入到弹框控制器中
+    [alertV addAction:cancle];
+    // 4.控制器 展示弹框控件，完成时不做操作
+    [self presentViewController:alertV animated:YES completion:^{
+        nil;
+    }];
+}
+
+
 - (void)handleSingleFingerEvent:(UITapGestureRecognizer *)tap {
     [self.EnterAmountTF resignFirstResponder];
 }
@@ -151,6 +166,7 @@
         [self pay];
     }else {
         [self.EnterAmountTF resignFirstResponder];
+        
         NSString *URL_Str = [NSString stringWithFormat:@"%@/student/api/updateOrderInfo",kURL_SHY];
         NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
         __weak  PayChooseViewController *VC = self;
@@ -175,9 +191,11 @@
 }
 
 - (void)pay {
-    
+    [self indeterminateExample];
     __weak  PayChooseViewController *VC = self;
     if ([payState isEqualToString:@"0"]) {//余额支付
+        
+        
         NSString *URL_Str = [NSString stringWithFormat:@"%@/student/api/pay",kURL_SHY];
         NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
         URL_Dic[@"stuId"]=[UserDataSingleton mainSingleton].studentsId;
@@ -191,6 +209,7 @@
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSLog(@"responseObject%@", responseObject);
             NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
+            [VC delayMethod];
             if ([resultStr isEqualToString:@"1"]) {
                 [VC showAlert:responseObject[@"msg"] time:1.2];
                 AccountViewController *viewController = [[AccountViewController alloc] initWithNibName:@"AccountViewController" bundle:nil];
@@ -200,6 +219,7 @@
                 [VC showAlert:responseObject[@"msg"] time:1.2];
             }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [VC delayMethod];
             NSLog(@"error%@", error);
         }];
     }else if ([payState isEqualToString:@"1"]){//支付宝支付
@@ -218,6 +238,7 @@
                 } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                     NSLog(@"responseObject%@", responseObject);
                     NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
+                    [VC delayMethod];
                     if ([resultStr isEqualToString:@"1"]) {
                         [VC showAlert:responseObject[@"msg"] time:1.2];
                         AccountViewController *viewController = [[AccountViewController alloc] initWithNibName:@"AccountViewController" bundle:nil];
@@ -228,6 +249,8 @@
                     }
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                     NSLog(@"error%@", error);
+                    [VC showAlert:@"网络超时请重试!"];
+                    [VC delayMethod];
                 }];
                 
             }

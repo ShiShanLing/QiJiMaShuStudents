@@ -52,7 +52,11 @@
 
 @end
 
-@implementation StudentsCenterVC
+@implementation StudentsCenterVC {
+    
+    NSString *avatar;
+    
+}
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -66,7 +70,6 @@
     self.currencyLabel.text = @"0";
     [self AnalysisUserData];
 }
-
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self setHidesBottomBarWhenPushed:YES];
@@ -86,6 +89,7 @@
     }
     return _viewControllerArray;
 }
+
 //报名订单
 - (IBAction)handleStudentDriverOrder:(UIButton *)sender {
     EnrollDetailsVC *VC = [[EnrollDetailsVC alloc] init];
@@ -100,7 +104,6 @@
     //NAVC.navigationBarHidden = YES;
     [self setHidesBottomBarWhenPushed:YES];
     [self presentViewController:NAVC animated:YES completion:nil];
-    
 }
 
 - (IBAction)handleReservationTest:(UIButton *)sender {
@@ -108,6 +111,12 @@
 }
 //分享注册
 - (IBAction)handleShareRegistered:(UIButton *)sender {
+    
+    
+    [self showAlert:@"该功能正在开发中!"];
+    return;
+    
+    
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
     NSArray* imageArray = @[[UIImage imageNamed:@"AppIcon"]];
     [shareParams SSDKSetupShareParamsByText:@"分享内容"
@@ -153,6 +162,10 @@
         return;
     }
     UserInfoHomeViewController *viewController = [[UserInfoHomeViewController alloc] initWithNibName:@"UserInfoHomeViewController" bundle:nil];
+    
+    viewController.avatar =  avatar;
+    NSLog(@"UserInfoHomeViewController%@", avatar);
+    
     UINavigationController *NAVC = [[UINavigationController alloc] initWithRootViewController:viewController];
     [self presentViewController:NAVC animated:YES completion:nil];
 }
@@ -171,7 +184,8 @@
 }
 //查看积分
 - (IBAction)handleCheckIntegral:(UIButton *)sender {
-    
+    [self  showAlert:@"该功能暂未开放"];
+    return;
 }
 //查看优惠券
 - (IBAction)handleCheckCoupons:(UIButton *)sender {
@@ -192,9 +206,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 - (void)AnalysisUserData{
     //获取应用程序沙盒的Documents目录
@@ -261,7 +272,7 @@
             if ([key isEqualToString:@"balance"]) {
                 [UserDataSingleton mainSingleton].balance = [NSString stringWithFormat:@"%@", urseDataDic[key]];
             }
-            NSLog(@"key%@",key);
+        //    NSLog(@"key%@",key);
             [userData setObject:urseDataDic[key] forKey:key];
             [model setValue:urseDataDic[key] forKey:key];
         }
@@ -282,6 +293,12 @@
     self.currencyLabel.text = [NSString stringWithFormat:@"%ld",model.points];
     NSString *subState;
     self.studentDriverStateLabel.text = @"";
+    avatar=model.avatar;
+    NSLog(@"avatar%@", avatar);
+    self.HeadPortraitImageView.layer.cornerRadius = self.HeadPortraitImageView.frame.size.width/2;
+    self.HeadPortraitImageView.layer.masksToBounds = YES;
+    [self.HeadPortraitImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kURL_Image, model.avatar]] placeholderImage:[UIImage imageNamed:@"icon_portrait_default"]];
+  
 }
 
 @end

@@ -16,5 +16,5 @@
 @property (strong, nonatomic) NSDictionary *coachInfoDic;
 
 @property (strong, nonatomic) NSString *coachId;
-
+@property (strong,nonatomic) NSString *coachPhone;
 @end

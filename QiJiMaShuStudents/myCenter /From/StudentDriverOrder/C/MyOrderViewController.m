@@ -86,8 +86,7 @@ typedef NS_OPTIONS(NSUInteger, OrderListType) {
 - (FYLSegmentView *)viewSegment{
     
     if (!_viewSegment) {
-        _viewSegment = [[FYLSegmentView alloc] initWithTitles:@[@"一键预约",@"未完成",@"已完成",@"取消中",@"已取消",@"申诉中",@"已关闭"]];
-        
+        _viewSegment = [[FYLSegmentView alloc] initWithTitles:@[@"一键预约",@"预约成功",@"培训结束",@"已取消"]];
         _viewSegment.delegate = self;
     }
     return _viewSegment;
@@ -113,10 +112,6 @@ typedef NS_OPTIONS(NSUInteger, OrderListType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
-    //添加当前类对象为一个观察者，name和object设置为nil，表示接收一切通知
-    [center addObserver:self selector:@selector(notice:) name:@"return" object:nil];
-    
     _rowHeight = 235;
     [self settingView];
     self.navigationController.navigationBar.barTintColor = kNavigation_Color;//导航条颜色
@@ -128,6 +123,11 @@ typedef NS_OPTIONS(NSUInteger, OrderListType) {
     
     [self.view addSubview:self.viewSegment];
 }
+- (void)handleReturn {
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+}
 #pragma mark - FYLSegmentViewDelegate
 - (void)FYLSegmentView:(FYLSegmentView *)segmentView didClickTagAtIndex:(NSInteger)index{
     
@@ -136,26 +136,17 @@ typedef NS_OPTIONS(NSUInteger, OrderListType) {
     }
     switch (index) {
         case 0:{
-            orderState = @"6";
+            orderState = @"6";//一键预约
         }
             break;
         case 1:
-            orderState = @"0";
+            orderState = @"0";//未完成的
             break;
         case 2:
-            orderState = @"1";
+            orderState = @"1";//已经完成的
             break;
         case 3:
-            orderState = @"2";
-            break;
-        case 4:
             orderState = @"3";
-            break;
-        case 5:
-            orderState = @"4";
-            break;
-        case 6:
-            orderState = @"5";
             break;
         default:
             break;
@@ -168,9 +159,6 @@ typedef NS_OPTIONS(NSUInteger, OrderListType) {
 
 
 
--(void)notice:(id)sender{
-    
-}
 #pragma mark 请求数据
 - (void)requestData{
     //http://192.168.100.101:8080/seller/train/api/listReservation?studentId=6eb2a978a5a445918a5ad06e2a366661&state=6
@@ -194,7 +182,6 @@ typedef NS_OPTIONS(NSUInteger, OrderListType) {
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [VC.mainTableView setupEmptyDataText:@"网络出错" verticalOffset:0 emptyImage:[UIImage imageNamed:@"sdf"] buttonText:@"点击刷新" tapBlock:^{
-            
         }];
         [VC showAlert:@"网络出错!!" time:1.2];
     }];
@@ -261,7 +248,6 @@ typedef NS_OPTIONS(NSUInteger, OrderListType) {
 
 // 确定取消订单弹框
 - (void)sureCancelOrderViewConfig {
-    
     self.payMethodView.frame = [UIScreen mainScreen].bounds;
     self.payView.layer.borderWidth = 1;
     self.payView.layer.borderColor = [MColor(204, 204, 204) CGColor];
@@ -358,7 +344,6 @@ typedef NS_OPTIONS(NSUInteger, OrderListType) {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     
 }
 

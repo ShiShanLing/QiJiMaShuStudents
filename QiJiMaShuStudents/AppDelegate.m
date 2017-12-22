@@ -36,30 +36,41 @@
     _Win.delegate = self;
 }
 
-- (void)aKeyClickBookin {
+- (void)indeterminateExample {
     
+    [MBProgressHUD showHUDAddedTo:self.window.rootViewController.view animated:YES];//加载指示器出现
+    
+}
+
+- (void)delayMethod{
+    
+    [MBProgressHUD hideHUDForView:self.window.rootViewController.view animated:YES];//加载指示器消失
+    
+}
+
+- (void)aKeyClickBookin {
     if ([UserDataSingleton mainSingleton].studentsId.length == 0) {
         LogInViewController *FYLPageVC =[[LogInViewController alloc]init];
         UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
         [self.window.rootViewController setHidesBottomBarWhenPushed:YES];
         [self.window.rootViewController presentViewController:NAVC animated:YES completion:nil];
-        
-        
         return;
     }
-    
     UIAlertController *alertV = [UIAlertController alertControllerWithTitle:@"" message:@"亲爱的会员,您可直接到俱乐部前台办理马术训练手册!" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"立即预约" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        [self indeterminateExample];
         NSString *URL_Str = [NSString stringWithFormat:@"%@/student/api/quickMakeReservation",kURL_SHY];
         NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
         URL_Dic[@"stuId"] =[UserDataSingleton mainSingleton].studentsId;
         __weak  AppDelegate *VC = self;
         AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+        session.requestSerializer.timeoutInterval = 10;
         [session POST:URL_Str parameters:URL_Dic progress:^(NSProgress * _Nonnull uploadProgress) {
             NSLog(@"uploadProgress%@", uploadProgress);
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSLog(@"responseObject%@", responseObject);
             NSString *resultStr = [NSString stringWithFormat:@"%@", responseObject[@"result"]];
+            [VC delayMethod];
             if ([resultStr isEqualToString:@"1"]) {
                 [VC showAlert:responseObject[@"msg"]];
                 MyOrderViewController *FYLPageVC =[[MyOrderViewController alloc]initWithNibName:@"MyOrderViewController" bundle:nil];
@@ -70,6 +81,8 @@
                 [VC showAlert:responseObject[@"msg"]];
             }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [VC delayMethod];
+            [VC showAlert:@"网络超时请重试!"];
             NSLog(@"error%@", error);
         }];
     }];
@@ -284,7 +297,6 @@
             }
             NSLog(@"授权结果 authCode = %@", authCode?:@"");
         }];
-        
     }else {
        
     }

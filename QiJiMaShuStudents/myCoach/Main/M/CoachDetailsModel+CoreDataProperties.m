@@ -20,11 +20,14 @@
 @dynamic carTypeName;
 @dynamic avatar;
 @dynamic reservationNum;
+@dynamic teachAge;
 
 -(void)setValue:(id)value forKey:(NSString *)key {
     if ([key isEqualToString:@"reservationNum"]) {
         self.reservationNum = [NSString stringWithFormat:@"%@", value];
-    }else {
+    }else if([key isEqualToString:@"teachAge"]){
+        self.teachAge = [NSString stringWithFormat:@"%@", value];
+    }else{
         [super setValue:value forKey:key];
     }
 }

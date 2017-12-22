@@ -68,10 +68,14 @@
 //优惠券
 - (IBAction)clickForCoupon:(id)sender {
         CouponListViewController *viewController = [[CouponListViewController alloc] initWithNibName:@"CouponListViewController" bundle:nil];
+    viewController.type = @"1";
         [self.navigationController pushViewController:viewController animated:YES];
 }
 //骑马币
 - (IBAction)clickForCoin:(id)sender {
+    
+    [self  showAlert:@"该功能暂未开放"];
+    return;
     
         CoinListViewController *viewController = [[CoinListViewController alloc] initWithNibName:@"CoinListViewController" bundle:nil];
         viewController.coinSum = _coinsum;
@@ -84,7 +88,7 @@
 // 获取钱包信息
 - (void)postGetWalletInfo {
     // 累计消费
-    self.usedLabel.text = [NSString stringWithFormat:@"金额%d元 骑马币%d个 鞍时券%d张", 100, 100, 100];
+    self.usedLabel.text = @"";//[NSString stringWithFormat:@"金额%d元 骑马币%d个 鞍时券%d张", 100, 100, 100];
     [self showData];
 
 }

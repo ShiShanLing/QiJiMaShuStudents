@@ -256,7 +256,7 @@ static  BOOL EditTime;
 }
 #pragma mark - 页面配置
 - (void)viewConfig {
-    [self.phoneBtn setTitle:@"13646712075" forState:UIControlStateNormal];
+    [self.phoneBtn setTitle:self.coachPhone forState:UIControlStateNormal];
     // 教练综合评分
     TQStarRatingView *starView = [[TQStarRatingView alloc] initWithFrame:CGRectMake(10, 27, 88, 15)];
     [starView changeStarForegroundViewWithScore:5.0];
@@ -488,7 +488,11 @@ static  BOOL EditTime;
 }
 
 - (IBAction)phoneCallClick:(id)sender {
-    NSString *phoneNum = [NSString stringWithFormat:@"telprompt:%@", @"13646712075"];
+    if (self.coachPhone.length == 0) {
+        [self showAlert:@"该教练没有留下电话"];
+        return;
+    }
+    NSString *phoneNum = [NSString stringWithFormat:@"telprompt:%@", self.coachPhone];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNum]];
 }
 // 提醒教练开课

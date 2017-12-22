@@ -111,7 +111,7 @@
     // 文字
     UILabel *itemLabel = [[UILabel alloc] init];
     [self addSubview:itemLabel];
-    itemLabel.width = 40;
+    itemLabel.width = 45;
     itemLabel.height = 12;
     itemLabel.top = itemIcon.bottom + 7;
     itemLabel.centerX = itemIcon.centerX;
@@ -144,7 +144,7 @@
     if (itemIndex == _itemIndex) return;
     UILabel *oldItemLabel = self.itemsLabelArray[_itemIndex];
     UILabel *newItemLabel = self.itemsLabelArray[itemIndex];
-    
+    // 加一个-时间选择功能----
     // 将选中图标移到相应位置
     UIImageView *itemIcon = self.itemsIconArray[itemIndex];
     // item对应的图标

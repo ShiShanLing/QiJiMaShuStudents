@@ -229,7 +229,7 @@
             }
             break;
         case 1:
-            self.statusLabel.text = @"已上马!";
+            self.statusLabel.text = @"已开始!";
             break;
         case 2:
             if (model.commentState == 0) {

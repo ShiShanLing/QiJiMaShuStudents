@@ -19,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *priceBtn;
 @property (weak, nonatomic) IBOutlet UIButton *directionBtn;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
-
 @end
 
 @implementation LearnCarShowTVCell
@@ -30,7 +29,7 @@
     self.directionBtn.layer.cornerRadius = 11;
     self.directionBtn.layer.masksToBounds = YES;
     self.titleLabel.text = model.goodsName;
-    self.priceLabel.text = [NSString stringWithFormat:@"¥:%.2f", model.goodsStorePrice];
+    self.priceLabel.text = [NSString stringWithFormat:@"¥:%.2f/鞍时+¥100教练费/鞍时", model.goodsStorePrice-100];
 }
 
 

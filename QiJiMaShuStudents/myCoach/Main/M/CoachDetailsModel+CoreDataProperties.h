@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *carTypeName;
 @property (nullable, nonatomic, copy) NSString *avatar;
 @property (nullable, nonatomic, copy) NSString *reservationNum;
+@property (nullable, nonatomic, copy) NSString *teachAge;
 
 -(void)setValue:(id)value forKey:(NSString *)key;
 

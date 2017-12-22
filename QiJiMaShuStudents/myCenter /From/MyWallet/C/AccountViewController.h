@@ -10,6 +10,6 @@
 
 @interface AccountViewController : GreyTopViewController
 
-@property (nonatomic, strong)NSString *type;
+@property (nonatomic, strong)NSString *type;//判断从哪个界面进来的 方便返回时候做判断
 
 @end

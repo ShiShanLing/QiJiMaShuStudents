@@ -56,7 +56,7 @@
     topLine.x = 0;
     topLine.y = 0;
     topLine.backgroundColor = MColor(214, 214, 214);
-    [tabBarView itemsTitleConfig:@[@"咨询", @"报名", @"培训", @"服务"]];
+    [tabBarView itemsTitleConfig:@[@"咨询", @"报名", @"预约培训", @"服务"]];
 }
 - (void)itemClick:(NSUInteger)itemIndex {
     

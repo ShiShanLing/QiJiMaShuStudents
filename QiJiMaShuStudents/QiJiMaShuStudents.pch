@@ -52,7 +52,6 @@
 #import "CouponsModel+CoreDataClass.h"
 #import "LogInViewController.h"
 #import "FYLPageViewController.h"
-
 //类扩展
 #import "UIScrollView+DPRefresh.h"
 #import "UIScrollView+DPEmptyDataSet.h"
@@ -77,15 +76,17 @@
 #define MColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0f]
 #define TextSize kFit(16)
 #define kTopSpacing  64
-//沈会阳 http://192.168.100.101:8080/seller
+//沈会阳 http://192.168.100.101:8080/school
 //线上     http://106.14.158.95:8081/school
-//张玉霄 http://192.168.0.250:8080/com-zerosoft-boot-assembly-seller-local-1.0.0-SNAPSHOT
+//张玉霄 http://192.168.0.241:8080/com-zerosoft-boot-assembly-seller-local-1.0.0-SNAPSHOT
 //吴佳境 http://192.168.100.33
 //http://192.168.100.101:8080/seller  18989847687
 #define kURL_SHY  @"http://106.14.158.95:8081/school"
+#define kURL_Image @"http://106.14.158.95:8081/img"
 #define kStudentId  @"1000"
 #define kUserId   @"4c7101faa2f84f7586c6fe52373f3729"
 #define kStoreId @"21865291353a4d169703e281faa72c11"
+//骐骥马场 ID 21865291353a4d169703e281faa72c11
 //下面三个是我复制的
 #define CUSTOM_RED MColor(247,100,92)
 #define CUSTOM_BLUE MColor(110,197,217)

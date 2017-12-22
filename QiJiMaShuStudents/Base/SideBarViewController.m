@@ -105,8 +105,7 @@
         UINavigationController *NAVC = [[UINavigationController alloc] initWithRootViewController:VC];
         [self presentViewController:NAVC animated:YES completion:nil];
     }else {
-        //0:未完成,1:已完结,2:取消中,3:已取消,4:申诉中,5:已关闭)
-        FYLPageViewController *FYLPageVC =[[FYLPageViewController alloc]initWithTitles:@[@"未完成",@"已完成",@"取消中",@"已取消",@"申诉中",@"已关闭"] viewControllers:self.viewControllerArray];
+        MyOrderViewController *FYLPageVC =[[MyOrderViewController alloc]initWithNibName:@"MyOrderViewController" bundle:nil];
         UINavigationController * NAVC = [[UINavigationController alloc] initWithRootViewController:FYLPageVC];
         //NAVC.navigationBarHidden = YES;
         [self setHidesBottomBarWhenPushed:YES];
