@@ -52,7 +52,6 @@ typedef enum {
 @property (strong, nonatomic) IBOutlet UILabel *licenseFrontLabel;
 @property (copy, nonatomic) NSString *student_cardpicfurl;
 
-
 // 学员证或驾驶证反面照
 @property (strong, nonatomic) IBOutlet UIImageView *licenseBackImageView;
 @property (strong, nonatomic) IBOutlet UIButton *licenseBackBtn;

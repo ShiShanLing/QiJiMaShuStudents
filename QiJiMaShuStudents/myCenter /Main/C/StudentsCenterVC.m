@@ -16,7 +16,6 @@
 @interface StudentsCenterVC ()
 @property (nonatomic, strong)NSMutableArray *viewControllerArray;
 @property (weak, nonatomic) IBOutlet UILabel *studentDriverStateLabel;
-
 /**
  余额
  */
@@ -162,7 +161,6 @@
         return;
     }
     UserInfoHomeViewController *viewController = [[UserInfoHomeViewController alloc] initWithNibName:@"UserInfoHomeViewController" bundle:nil];
-    
     viewController.avatar =  avatar;
     NSLog(@"UserInfoHomeViewController%@", avatar);
     

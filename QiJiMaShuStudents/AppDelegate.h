@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #define APP_DELEGATE ([UIApplication sharedApplication].delegate)
+
+static NSString *appKey = @"f8e7e8a4158bd1e9e5baf4a1";
+static NSString *channel = @"iOS";
+static BOOL isProduction = NO;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

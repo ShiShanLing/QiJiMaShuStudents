@@ -72,7 +72,6 @@
 #define YouLikeCellH kFit((kFit(259) - YouLikeInset))
 #define SScreen_Width [UIScreen mainScreen].bounds.size.width
 #define SScreen_Height [UIScreen mainScreen].bounds.size.height
-
 #define MColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0f]
 #define TextSize kFit(16)
 #define kTopSpacing  64
@@ -81,7 +80,7 @@
 //张玉霄 http://192.168.0.241:8080/com-zerosoft-boot-assembly-seller-local-1.0.0-SNAPSHOT
 //吴佳境 http://192.168.100.33
 //http://192.168.100.101:8080/seller  18989847687
-#define kURL_SHY  @"http://106.14.158.95:8081/school"
+#define kURL_SHY  @"http://192.168.0.241:8080/com-zerosoft-boot-assembly-seller-local-1.0.0-SNAPSHOT"
 #define kURL_Image @"http://106.14.158.95:8081/img"
 #define kStudentId  @"1000"
 #define kUserId   @"4c7101faa2f84f7586c6fe52373f3729"

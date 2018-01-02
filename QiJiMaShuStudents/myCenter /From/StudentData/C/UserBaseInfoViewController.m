@@ -44,7 +44,9 @@
     
 }
 - (IBAction)ReturnPreviousPage:(UIButton *)sender {
+    
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (void)viewDidLoad {
@@ -155,7 +157,6 @@
     [self.phoneField resignFirstResponder];
     [self.nameField resignFirstResponder];
 }
-
 // 开始编辑，铅笔变红
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     UIImage *image = [UIImage imageNamed:@"icon_redpencil_userbaseinfo"];

@@ -24,6 +24,20 @@
 		A1541E4E1FC2AF8200D84AC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1541E4D1FC2AF8200D84AC6 /* main.m */; };
 		A1541E581FC2AF8200D84AC6 /* QiJiMaShuStudentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1541E571FC2AF8200D84AC6 /* QiJiMaShuStudentsTests.m */; };
 		A1541E631FC2AF8200D84AC6 /* QiJiMaShuStudentsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1541E621FC2AF8200D84AC6 /* QiJiMaShuStudentsUITests.m */; };
+		A19E42EF1FF348F4000A9429 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E42EE1FF348F3000A9429 /* CFNetwork.framework */; };
+		A19E42F11FF348FD000A9429 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E42F01FF348FD000A9429 /* CoreFoundation.framework */; };
+		A19E42F31FF34906000A9429 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E42F21FF34906000A9429 /* CoreTelephony.framework */; };
+		A19E42F51FF34912000A9429 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E42F41FF34912000A9429 /* SystemConfiguration.framework */; };
+		A19E42F71FF3491A000A9429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E42F61FF3491A000A9429 /* CoreGraphics.framework */; };
+		A19E42F91FF34928000A9429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E42F81FF34928000A9429 /* Foundation.framework */; };
+		A19E42FB1FF34932000A9429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E42FA1FF34931000A9429 /* UIKit.framework */; };
+		A19E42FD1FF34939000A9429 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E42FC1FF34939000A9429 /* Security.framework */; };
+		A19E42FF1FF34944000A9429 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E42FE1FF34943000A9429 /* libz.tbd */; };
+		A19E43011FF3494C000A9429 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E43001FF3494C000A9429 /* AdSupport.framework */; };
+		A19E43031FF34955000A9429 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E43021FF34955000A9429 /* UserNotifications.framework */; };
+		A19E43051FF34961000A9429 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E43041FF34961000A9429 /* libresolv.tbd */; };
+		A19E43081FF34A16000A9429 /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E43061FF34A15000A9429 /* jpush-ios-3.0.7.a */; };
+		A19E43091FF34A16000A9429 /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19E43071FF34A15000A9429 /* jcore-ios-1.1.6.a */; };
 		A1DEB3911FC2B4D600F45256 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB1A51FC2B4CB00F45256 /* AppDelegate.m */; };
 		A1DEB3921FC2B4D600F45256 /* ComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DEB1AB1FC2B4CC00F45256 /* ComplaintViewController.m */; };
 		A1DEB3931FC2B4D600F45256 /* ComplaintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DEB1AC1FC2B4CC00F45256 /* ComplaintViewController.xib */; };
@@ -309,6 +323,24 @@
 		A1541E5E1FC2AF8200D84AC6 /* QiJiMaShuStudentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiJiMaShuStudentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1541E621FC2AF8200D84AC6 /* QiJiMaShuStudentsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiJiMaShuStudentsUITests.m; sourceTree = "<group>"; };
 		A1541E641FC2AF8200D84AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A19E42ED1FF33CE7000A9429 /* QiJiMaShuStudents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QiJiMaShuStudents.entitlements; sourceTree = "<group>"; };
+		A19E42EE1FF348F3000A9429 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A19E42F01FF348FD000A9429 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		A19E42F21FF34906000A9429 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A19E42F41FF34912000A9429 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A19E42F61FF3491A000A9429 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A19E42F81FF34928000A9429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A19E42FA1FF34931000A9429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A19E42FC1FF34939000A9429 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A19E42FE1FF34943000A9429 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A19E43001FF3494C000A9429 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		A19E43021FF34955000A9429 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		A19E43041FF34961000A9429 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		A19E43061FF34A15000A9429 /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "jpush-ios-3.0.7.a"; path = "Lib/jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
+		A19E43071FF34A15000A9429 /* jcore-ios-1.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "jcore-ios-1.1.6.a"; path = "Lib/jcore-ios-1.1.6.a"; sourceTree = "<group>"; };
+		A19E430A1FF34A36000A9429 /* JPUSHService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JPUSHService.h; path = Lib/JPUSHService.h; sourceTree = SOURCE_ROOT; };
+		A19E430D1FF34B11000A9429 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		A19E43101FF34B11000A9429 /* jpush-extension-ios-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.0.0.a"; sourceTree = "<group>"; };
 		A1DEB1A41FC2B11600F45256 /* QiJiMaShuStudents.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiJiMaShuStudents.pch; sourceTree = "<group>"; };
 		A1DEB1A51FC2B4CB00F45256 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A1DEB1AA1FC2B4CC00F45256 /* ComplaintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplaintViewController.h; sourceTree = "<group>"; };
@@ -700,6 +732,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19E43081FF34A16000A9429 /* jpush-ios-3.0.7.a in Frameworks */,
+				A19E43091FF34A16000A9429 /* jcore-ios-1.1.6.a in Frameworks */,
+				A19E43051FF34961000A9429 /* libresolv.tbd in Frameworks */,
+				A19E43031FF34955000A9429 /* UserNotifications.framework in Frameworks */,
+				A19E43011FF3494C000A9429 /* AdSupport.framework in Frameworks */,
+				A19E42FF1FF34944000A9429 /* libz.tbd in Frameworks */,
+				A19E42FD1FF34939000A9429 /* Security.framework in Frameworks */,
+				A19E42FB1FF34932000A9429 /* UIKit.framework in Frameworks */,
+				A19E42F91FF34928000A9429 /* Foundation.framework in Frameworks */,
+				A19E42F71FF3491A000A9429 /* CoreGraphics.framework in Frameworks */,
+				A19E42F51FF34912000A9429 /* SystemConfiguration.framework in Frameworks */,
+				A19E42F31FF34906000A9429 /* CoreTelephony.framework in Frameworks */,
+				A19E42F11FF348FD000A9429 /* CoreFoundation.framework in Frameworks */,
+				A19E42EF1FF348F4000A9429 /* CFNetwork.framework in Frameworks */,
 				89BECC58E6C1F35B0ABF8B04 /* libPods-QiJiMaShuStudents.a in Frameworks */,
 				A1DEB4081FC2B4D600F45256 /* AlipaySDK.framework in Frameworks */,
 			);
@@ -769,6 +815,7 @@
 		A1541E3A1FC2AF8200D84AC6 /* QiJiMaShuStudents */ = {
 			isa = PBXGroup;
 			children = (
+				A19E42ED1FF33CE7000A9429 /* QiJiMaShuStudents.entitlements */,
 				A1DEB2FF1FC2B4D000F45256 /* AppDelegate.h */,
 				A1DEB1A51FC2B4CB00F45256 /* AppDelegate.m */,
 				A1DEB3101FC2B4D200F45256 /* Base */,
@@ -813,6 +860,15 @@
 			);
 			path = QiJiMaShuStudentsUITests;
 			sourceTree = "<group>";
+		};
+		A19E430B1FF34B11000A9429 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A19E430D1FF34B11000A9429 /* JPUSHService.h */,
+				A19E43101FF34B11000A9429 /* jpush-extension-ios-1.0.0.a */,
+			);
+			path = Lib;
+			sourceTree = SOURCE_ROOT;
 		};
 		A1DEB1A61FC2B4CC00F45256 /* myCenter  */ = {
 			isa = PBXGroup;
@@ -1908,6 +1964,8 @@
 		A1DEB4831FC2B8AF00F45256 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				A19E430B1FF34B11000A9429 /* Lib */,
+				A19E430A1FF34A36000A9429 /* JPUSHService.h */,
 				A1DEB4851FC2B8AF00F45256 /* SDAutoLayout */,
 			);
 			path = thirdParty;
@@ -1928,6 +1986,20 @@
 		D43A6B72A26235C15F709EF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A19E43071FF34A15000A9429 /* jcore-ios-1.1.6.a */,
+				A19E43061FF34A15000A9429 /* jpush-ios-3.0.7.a */,
+				A19E43041FF34961000A9429 /* libresolv.tbd */,
+				A19E43021FF34955000A9429 /* UserNotifications.framework */,
+				A19E43001FF3494C000A9429 /* AdSupport.framework */,
+				A19E42FE1FF34943000A9429 /* libz.tbd */,
+				A19E42FC1FF34939000A9429 /* Security.framework */,
+				A19E42FA1FF34931000A9429 /* UIKit.framework */,
+				A19E42F81FF34928000A9429 /* Foundation.framework */,
+				A19E42F61FF3491A000A9429 /* CoreGraphics.framework */,
+				A19E42F41FF34912000A9429 /* SystemConfiguration.framework */,
+				A19E42F21FF34906000A9429 /* CoreTelephony.framework */,
+				A19E42F01FF348FD000A9429 /* CoreFoundation.framework */,
+				A19E42EE1FF348F3000A9429 /* CFNetwork.framework */,
 				7CD5E870D822C564B5D4389A /* libPods-QiJiMaShuStudents.a */,
 			);
 			name = Frameworks;
@@ -2003,7 +2075,12 @@
 				TargetAttributes = {
 					A1541E371FC2AF8200D84AC6 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A1541E521FC2AF8200D84AC6 = {
 						CreatedOnToolsVersion = 9.1;
@@ -2537,8 +2614,9 @@
 			baseConfigurationReference = BDFA6D6B45E26CC6C434551F /* Pods-QiJiMaShuStudents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = QiJiMaShuStudents/QiJiMaShuStudents.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZC4VG35Y5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2548,10 +2626,14 @@
 				INFOPLIST_FILE = QiJiMaShuStudents/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.QiJIMaShuStudenrs.www-iOSApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "73f0e7f8-95c9-4959-ac11-c0b185537529";
-				PROVISIONING_PROFILE_SPECIFIER = qijimashuxueyuan;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2561,8 +2643,9 @@
 			baseConfigurationReference = 67B3011A8A0CDF06F906B368 /* Pods-QiJiMaShuStudents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = QiJiMaShuStudents/QiJiMaShuStudents.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZC4VG35Y5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2572,10 +2655,14 @@
 				INFOPLIST_FILE = QiJiMaShuStudents/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.QiJIMaShuStudenrs.www-iOSApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "73f0e7f8-95c9-4959-ac11-c0b185537529";
-				PROVISIONING_PROFILE_SPECIFIER = qijimashuxueyuan;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

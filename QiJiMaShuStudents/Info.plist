@@ -6,6 +6,7 @@
 	<string>亲,能使用您的位置吗?</string>
 	<key>CFBundleDisplayName</key>
 	<string>骐骥马术</string>
+    
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -18,6 +19,7 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.2.1</string>
+ 
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -81,6 +83,16 @@
 	<string>92c470ffaf45aee90e3097b9e0fb8216</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>jpush.cn</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>

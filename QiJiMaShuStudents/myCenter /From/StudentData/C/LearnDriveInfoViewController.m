@@ -67,7 +67,6 @@
 #pragma mark - 页面设置
 - (void)settingView {
     [self.mainScrollView contentSizeToFit];
-    
     // 输入框右边距
     UIView *rightPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 37, 20)];
     self.stuCardIdField.rightView = rightPaddingView;
@@ -108,18 +107,16 @@
     [self.idCardBackBtn addTarget:self action:@selector(clickForPhotoView:) forControlEvents:UIControlEventTouchUpInside];
     [self.licenseFrontBtn addTarget:self action:@selector(clickForPhotoView:) forControlEvents:UIControlEventTouchUpInside];
     [self.licenseBackBtn addTarget:self action:@selector(clickForPhotoView:) forControlEvents:UIControlEventTouchUpInside];
-    
     // 点击背景退出键盘
     [self keyboardHiddenFun];
 }
-
+//是否可以把这个方法分割掉
 // 显示数据
 - (void)showData {
     [self loadLocalData];
     self.stuCardIdField.text = _student_cardnum;
     self.madeTimeField.text = _student_card_creat;
     self.idCardField.text = _id_cardnum;
-    
     [self.idCardFrontImageView sd_setImageWithURL:[NSURL URLWithString:_id_cardpicfurl] placeholderImage:nil];
     [self.idCardBackImageView sd_setImageWithURL:[NSURL URLWithString:_id_cardpicburl] placeholderImage:nil];
     [self.licenseFrontImageView sd_setImageWithURL:[NSURL URLWithString:_student_cardpicfurl] placeholderImage:nil];
@@ -138,7 +135,6 @@
     [self.stuCardIdField resignFirstResponder];
     [self.idCardField resignFirstResponder];
 }
-
 // 开始编辑，铅笔变红
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     UIImage *image = [UIImage imageNamed:@"icon_redpencil_userbaseinfo"];

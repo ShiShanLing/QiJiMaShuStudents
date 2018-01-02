@@ -463,17 +463,12 @@
         NSLog(@"error%@", error);
         [VC showAlert:@"网络超时,请稍后重试!"];
     }];
-
-    
-    
-
 }
 
 - (void) backLogin{
  
 
 }
-
 #pragma mark - 数据处理
 - (NSString *)stringFromDate:(NSDate *)date{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -484,7 +479,6 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     
     NSString *destDateString = [dateFormatter stringFromDate:date];
-    
     return destDateString;
 }
 
@@ -492,42 +486,15 @@
 - (void)catchInputData {
     _gender = [self.sexField.text isEqualToString:@"男"]? 1 : 2;
     _birthday = self.birthdayField.text;
+    //
     _address = self.addrField.text;
     _urgentPerson = self.emergentPersonField.text;
     _urgentPhone = [self.emergentPhoneField.text stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
-
-// 页面数据本地化
-- (void)locateData {
-    NSDictionary *user_info = [CommonUtil getObjectFromUD:@"UserInfo"];
-    NSMutableDictionary *new_user_info = [NSMutableDictionary dictionaryWithDictionary:user_info];
-    [new_user_info setObject:[NSNumber numberWithInt:_gender] forKey:@"gender"];
-    [new_user_info setObject:_birthday forKey:@"birthday"];
-    [new_user_info setObject:_address forKey:@"address"];
-    [new_user_info setObject:_urgentPerson forKey:@"urgent_person"];
-    [new_user_info setObject:_urgentPhone forKey:@"urgent_phone"];
-    [CommonUtil saveObjectToUD:new_user_info key:@"UserInfo"];
-}
-
 // 加载本地数据
-- (void)loadLocalData {
-    NSDictionary *user_info = [CommonUtil getObjectFromUD:@"UserInfo"];
-    _gender = [[user_info objectForKey:@"gender"] intValue];
-    _birthday = [user_info objectForKey:@"birthday"];
-    _address = [user_info objectForKey:@"address"];
-    _urgentPerson = [user_info objectForKey:@"urgent_person"];
-    _urgentPhone = [user_info objectForKey:@"urgent_phone"];
+- (void)loadLocalData  {
     
-    if (![CommonUtil isEmpty:_birthday]) {
-        NSArray *subStr = [_birthday componentsSeparatedByString:@"-"];
-        if (subStr.count == 3) {
-            _myYear = subStr[0];
-            _myMonth = subStr[1];
-            _myDay = subStr[2];
-        }
-    }
 }
-
 #pragma mark - 点击事件
 - (IBAction)clickForCommit:(id)sender {
     [self postPerfectPersonInfo];
@@ -560,11 +527,7 @@
 - (IBAction)clickForCityDone:(id)sender {
     NSString *addrStr = nil;
     NSString *areaStr = [self.curArea.areaName stringByReplacingOccurrencesOfString:@"  " withString:@""];
-//    if (self.curProvince.isZxs) { // 直辖市
-//        addrStr = [NSString stringWithFormat:@"%@-%@", self.curProvince.provinceName, areaStr];
-//    } else {
-        addrStr =  [NSString stringWithFormat:@"%@-%@-%@", self.curProvince.provinceName, self.curCity.cityName, areaStr];
-//    }
+    addrStr =  [NSString stringWithFormat:@"%@-%@-%@", self.curProvince.provinceName, self.curCity.cityName, areaStr];
     self.cityField.text = addrStr;
     self.selectProvinceID = self.curProvince.provinceID;
     self.selectCityID = self.curCity.cityID;
