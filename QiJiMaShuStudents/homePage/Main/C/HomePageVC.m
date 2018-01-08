@@ -184,9 +184,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  
         return 1;
-    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -283,7 +281,7 @@
     if(![self judgeNeedVersionUpdate])  return ;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
         
-        NSString *URL_Str = [[NSString alloc] initWithFormat:@"http://itunes.apple.com/lookup?id=%@",@"1325417441"];
+        NSString *URL_Str = [[NSString alloc] initWithFormat:@"https://itunes.apple.com/cn/lookup?id=%@",@"1325417441"];
         NSMutableDictionary *URL_Dic = [NSMutableDictionary dictionary];
         __block NSMutableDictionary *dic = [NSMutableDictionary dictionary];
         AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
